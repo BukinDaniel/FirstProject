@@ -6,24 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <!-- <?php> какая то БД </?php> -->
 </head>
 <body>
     <h1 class="Hello">Приветствуем на нашем сайте BukInCRM</h1>
     <form action="#">
-        <div class="isername">
+        <div class="username">
             <p>Логин:</p> 
             <input tabindex="1" placeholder="Имя пользователя" type="text" name="username" value="">
         </div>
         
         <div class="userpass">
             <p>Пароль:</p>
-            <input tabindex="2" type="password" name="userpass" value="">
+            <input tabindex="2" type="password" name="userpassword" value="">
         </div>
         <br>
-        <button type="submit">Войти</button>
-        <p><input type="checkbox" name="UnsaveEnter" value="yes"> Небезопасный вход</p> 
-        
+        <div class="button">
+            <button type="submit">Войти</button>
+        </div>
+        <div>
+            <p><input type="checkbox" name="UnsaveEnter" value="yes"> Небезопасный вход</p> 
+        </div>
     </form>
 </body>
 </html>
