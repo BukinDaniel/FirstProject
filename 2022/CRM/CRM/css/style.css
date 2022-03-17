@@ -99,10 +99,12 @@ body {
 
 h1 {
     font-size: 30px;
+    margin-bottom: 20px;
 }
 
 p {
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 div.forma {
@@ -116,9 +118,12 @@ div.forma {
     border: solid 1px;
 }
 
+input {
+    margin-bottom: 10px;
+}
+
 .button p {
     font-size: 18px;
-    border: solid;
-    border-radius: 10%;
-    padding: 5px 5px;
+    height: 10px;
+    width: 50px;
 }
