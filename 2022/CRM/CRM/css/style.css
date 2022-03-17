@@ -1,4 +1,6 @@
-body {
+body{
+    width: 100%;
+    height: 100%;
     background-image: url(https://oborot.ru/wp-content/uploads/2021/02/crm.png);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -6,12 +8,13 @@ body {
 
 div.forma {
     text-align: center;
-    background-color: rgba(113, 236, 144, 0.897);
-    /* border: solid; */
-    /* border-color: rgb(179, 255, 0); */
-    margin-top: 300px;
-    margin-left: 700px;
-    margin-right: 700px;
-    border: solid 1px;
+    height: 350px;
+    width: 500px;
+    background-color: rgba(207, 211, 224, 0.897);
+    margin:auto;
+    /* margin-top: 300px;
+    /* margin-left: 700px;
+    margin-right: 700px; */ 
+    border: solid 5px;
 }
 
