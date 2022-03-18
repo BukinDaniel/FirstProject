@@ -84,10 +84,14 @@ h6 {
 /* конец обнуляющего стиля */
 
 body {
+    width: 100%;
+    height: 100%;
     background-image: url(https://oborot.ru/wp-content/uploads/2021/02/crm.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    max-width: 400px;
+    width: 500px;
+    height: 350px;
+    margin: auto;
 }
 
 h1 {
