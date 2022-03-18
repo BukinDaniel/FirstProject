@@ -15,31 +15,28 @@
 </head>
 
 <body>
-    <div class="forma">
-        <h1 class="Hello">Приветствуем на нашем сайте <br> BukInCRM</h1>
+    <div class="page">
+        <div class="forma">
+            <h1 class="Hello">Приветствуем на нашем сайте <br> BukInCRM</h1>
+            <form action="#">
+                <div class="username">
+                    <p>Логин:</p>
+                    <input tabindex="1" placeholder="Имя пользователя" type="text" name="username" value="">
+                </div>
 
-        <form action="#">
-            <div class="username">
-                <p>Логин:</p>
-
-                <input tabindex="1" placeholder="Имя пользователя" type="text" name="username" value="">
+                <div class="userpass">
+                    <p>Пароль:</p>
+                    <input tabindex="2" type="password" name="userpassword" value="">
+                </div>
+                <br>
+                <div class="button">
+                    <button type="submit">Войти</button>
+                </div>
+                <div>
+                    <p><input type="checkbox" name="UnsaveEnter" value="yes"> Будет выполнен опасный вход</p>
+            </form>
             </div>
-
-            <div class="userpass">
-                <p>Пароль:</p>
-
-                <input tabindex="2" type="password" name="userpassword" value="">
-            </div>
-            <br>
-            <div class="button">
-                <button type="submit"> <span> Вход</span></button>
-            </div>
-            <div>
-                <p><input type="checkbox" name="UnsaveEnter" value="yes"> Будет выполнен опасный вход</p>
-            </div>
-    </div>
-
-    </form>
+        </div>
 </body>
 
 </html>
