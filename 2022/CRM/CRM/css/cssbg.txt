@@ -1,0 +1,2 @@
+background управляет свойствами фона
+https://fls.guru/cssbackground.html - методичка
