@@ -7,5 +7,5 @@ https://fls.guru/cssbackground.html - методичка
 -background-position - положение. 
    1ое значение по горизонтали
    2ое по вертикали
-- background-attachment прокрутка фона относительно элемента
-background-size - масштабирует фон
+-background-attachment прокрутка фона относительно элемента
+-background-size - масштабирует фон
