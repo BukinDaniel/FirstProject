@@ -111,7 +111,7 @@ div.forma {
     border: 5px solid rgb(248, 10, 2);
     width: 30%;
     margin: 10% auto;
-    background-size: cover;
+    /* background-size: cover; пока тут это вроде и не нужно */
     ;
 }
 
