@@ -117,6 +117,7 @@ div.forma {
 
 input {
     font-size: 20px;
+    max-width: 100%;
 }
 
 button {
