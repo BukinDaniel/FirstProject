@@ -230,3 +230,8 @@ input {
     height: 10px;
     width: 50px;
 }
+button {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
