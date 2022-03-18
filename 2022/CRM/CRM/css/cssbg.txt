@@ -1,2 +1,10 @@
 background управляет свойствами фона
 https://fls.guru/cssbackground.html - методичка
+-background-color - придать цвет фону
+-background-image - фон картинкой
+Запись:background-image: url(путь к картинке)
+-background-repeat - определяет как будет повторяться фон
+-background-position - положение. 
+   1ое значение по горизонтали
+   2ое по вертикали
+- background-attachment прокрутка фона относительно элемента
