@@ -28,7 +28,7 @@
 Вместо 0- количество секунд которые должны пройти перед тем как пользователь будет перенаправлен на страницу url=
 Используется для перенаправления пользователя,например,на главную страницу, если та на которую он зашел уже не существует
 
-Мета теги для соц.сетей
+Мета теги для facebook/vk
 <meta property= "og:locale" content= "ru_RU"> локализация для русскоязычного сайта
 <meta property= "og:type content= "article"> тип контента
 <meta property= "og:title" content= "ПримерЗаголовкаСтраницы"> который выводится в соц сети
@@ -36,3 +36,10 @@
 <meta property= "image" content= "СсылкаНаИзображение"> которое будет публиковаться в записи
 <meta property= "url" content= "СсылкаНаТекущуюСтраницу">
 <meta property= "site_name" content= "НазваниеСайта">
+
+Для твиттера
+<meta name="twitter:card" content="summary"> Тип карты по умолчанию summary
+<meta name="twitter:site" content="Пример"> Имя/Логин Автора
+<meta name="twitter:title" content="Пример2"> название страницы
+<meta name="twitter:description" content="Пример3"> Описание страницы
+<meta name="twitter:image" content="СсылкаНаКартинку"> 
