@@ -17,14 +17,17 @@ body {
 .menu {}
 
 .menu__list {
-    border: 1px solid #000;
     display: flex;
     justify-content: end;
 }
 
-.menu__list-link {}
-
 .menu__link-item {
-    margin-left: 15px;
+    margin-right: 25px;
     font-size: 20px;
 }
+
+.menu__link-item:last-child {
+    margin-right: 5px;
+}
+
+.menu__list-link {}
