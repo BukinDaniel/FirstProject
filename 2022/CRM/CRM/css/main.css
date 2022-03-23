@@ -105,11 +105,11 @@ body {
           justify-content: end;
 }
 
-.menu__link-item {
+.menu__item {
   margin-right: 25px;
   font-size: 20px;
 }
 
-.menu__link-item:last-child {
+.menu__item:last-child {
   margin-right: 5px;
 }
