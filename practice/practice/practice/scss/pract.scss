@@ -12,12 +12,14 @@
     background-color: #000000;
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 .block__list {
     display: flex;
+    width: 500px;
     border: 1px solid #fff;
+    justify-content: space-between;
+    margin-right: 100px;
 }
 
 .block__link {
