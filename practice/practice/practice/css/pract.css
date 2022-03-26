@@ -79,3 +79,33 @@ h6 {
 }
 
 /* конец обнуляющего стиля */
+.container {
+  max-width: 1400px;
+}
+
+.block {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.block__header {
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid red;
+}
+
+.block__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #fff;
+}
+
+.block__link {
+  color: #ffffff;
+}
