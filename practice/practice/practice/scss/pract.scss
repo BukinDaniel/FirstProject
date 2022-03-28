@@ -1,27 +1,52 @@
 @import "_nullstyle";
-.container {
+body {
     max-width: 1400px;
 }
 
-.block {
-    max-width: 1200px;
-    margin: 0 auto;
+.container {
+    max-width: 1100px;
 }
 
 .block__header {
     background-color: #000000;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 70px;
 }
+
+.logo {}
 
 .block__list {
     display: flex;
     width: 500px;
-    border: 1px solid #fff;
     justify-content: space-between;
     margin-right: 100px;
 }
 
 .block__link {
+    opacity: 0.69;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
     color: #ffffff;
+    margin: 30px 46px 30px 0px;
 }
+
+.block__top {
+    background-color: #9a9a9a;
+}
+
+.block__headertop {
+    margin-bottom: 20px;
+    opacity: 0.21;
+    font-family: 'Open Sans';
+    font-size: 33.1px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+}
+
+.axit {}
