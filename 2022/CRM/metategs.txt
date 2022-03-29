@@ -43,3 +43,6 @@
 <meta name="twitter:title" content="Пример2"> название страницы
 <meta name="twitter:description" content="Пример3"> Описание страницы
 <meta name="twitter:image" content="СсылкаНаКартинку"> 
+
+<link rel= "shortcut icon" href = "favicon.ico"> для подключения графический иконки нашего сайта во вкладке браузеров
+Можно создать в редакторе/использовать онлайн сервис.
