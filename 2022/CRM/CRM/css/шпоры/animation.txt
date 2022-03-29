@@ -15,4 +15,4 @@ transition-timing-function задает стиль перехода(сценар
 - esea-in-out
 - linear
 - steps(int, start|end)
-- cubic- 
+- cubic-bezier
