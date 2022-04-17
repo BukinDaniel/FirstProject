@@ -1,0 +1,36 @@
+@import "_nullstyle";
+body {
+    font-size: 18px;
+    font-family: 'Open Sans';
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin-right: 613px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+    /* identical to box height, or 100% */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #69B9FF;
+}
+
+.header__link--blue {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    /* identical to box height, or 133% */
+    color: #0082F3;
+}
