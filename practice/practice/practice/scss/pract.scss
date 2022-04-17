@@ -1,64 +1,163 @@
-    @import "_nullstyle";
-    .header {}
-    
-    .headerinner {
-        max-height: 100vh;
-    }
-    
-    .container {
-        max-width: 965px;
-        padding: 0 10px;
-        margin: 0 auto;
-    }
-    
-    .menu {}
-    
-    .menu__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-inline-start: 0px;
-        padding: 0px 5px;
-        margin-left: -5px;
-    }
-    
-    .menu__list-item {}
-    
-    .menu__link--black {
-        color: #070707;
-        font-size: 18px;
-        line-height: 22px;
-    }
-    
-    .menu__link {
-        color: #828282;
-        font-size: 18px;
-        line-height: 22px;
-    }
-    
-    .header__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-    
-    .header__title {
-        font-size: 47.3392px;
-        line-height: 59px;
-        color: #070707;
-        max-width: 124px;
-    }
-    
-    .header__subtitle {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        color: #070707;
-        max-width: 140px;
-    }
-    
-    .header__lang {
-        transform: rotate(-90deg);
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-    }
+  @import "_nullstyle";
+  @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;700&display=swap');
+  body {
+      font-family: 'Abhaya Libre', serif;
+      color: #070707;
+      max-width: 100%;
+      font-family: 'Abhaya Libre Medium';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+  }
+  
+  .header {}
+  
+  .headerinner {
+      max-height: 100vh;
+  }
+  
+  .container {
+      max-width: 965px;
+      padding: 0 10px;
+      margin: 0 auto;
+  }
+  
+  .title {
+      font-size: 34px;
+      font-weight: bold;
+  }
+  
+  .menu {}
+  
+  .menu__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline-start: 0px;
+      padding: 0px 5px;
+      margin-left: -5px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 32px;
+  }
+  
+  .menu__list-item {}
+  
+  .menu__link--black {
+      font-style: normal;
+      font-weight: 700;
+  }
+  
+  .menu__link {
+      font-style: normal;
+      font-weight: 700;
+      color: #828282;
+  }
+  
+  .header__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .header__title {
+      font-size: 47.3392px;
+      line-height: 59px;
+      max-width: 124px;
+      font-weight: bold;
+  }
+  
+  .header__subtitle {
+      max-width: 160px;
+      margin-bottom: 0px;
+  }
+  
+  .header__lang {
+      transform: rotate(-90deg);
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+  }
+  
+  .header__lang::after {
+      content: '| ENG';
+      font-weight: 700;
+  }
+  
+  .header__photo {
+      margin-bottom: 104px;
+  }
+  
+  .about {
+      background-color: #F6F6F6;
+      text-align: center;
+      padding-top: 120px;
+      margin-bottom: 91px;
+      min-width: 965px;
+  }
+  
+  .about__title {
+      margin-bottom: 17px;
+  }
+  
+  .about__text {
+      margin-bottom: 30px;
+  }
+  
+  .about__text:last-child {
+      margin-bottom: 0px;
+      padding-bottom: 107px;
+  }
+  
+  .skills__title {
+      margin-bottom: 70px;
+  }
+  
+  .skills__text {
+      margin-bottom: 84px;
+  }
+  
+  .skills__inner {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .skills__img {
+      display: inline-block;
+      margin-bottom: 24px;
+  }
+  
+  .skills__programm {
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: #828282;
+      align-items: center;
+  }
+  
+  .skills {
+      margin-bottom: 110px;
+  }
+  
+  .contacts__title {
+      margin-bottom: 20px;
+  }
+  
+  .contacts__text {
+      margin-bottom: 30px;
+  }
+  
+  .contacts__btn {
+      background-color: black;
+      color: white;
+      padding: 13px 50px;
+      border-radius: 30px;
+      font-weight: 700;
+      border-style: none;
+      margin-bottom: 90px;
+  }
+  
+  .contacts__icon {
+      margin-bottom: 45px;
+  }
