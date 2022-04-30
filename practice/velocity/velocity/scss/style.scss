@@ -1,36 +1,85 @@
-@import "_nullstyle";
-body {
-    font-size: 18px;
-    font-family: 'Open Sans';
-}
-
-.container {
-    max-width: 940px;
-    margin: 0 auto;
-}
-
-.header__list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.header__logo {
-    margin-right: 613px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 25px;
-    /* identical to box height, or 100% */
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #69B9FF;
-}
-
-.header__link--blue {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    /* identical to box height, or 133% */
-    color: #0082F3;
-}
+    @import "_nullstyle";
+    body {
+        font-size: 18px;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .container {
+        max-width: 940px;
+        margin: 0 auto;
+    }
+    
+    .header__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header__logo {
+        margin-right: 613px;
+        font-size: 25px;
+        line-height: 25px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #69B9FF;
+    }
+    
+    .header__link--blue {
+        font-size: 15px;
+        line-height: 20px;
+        color: #0082F3;
+    }
+    
+    .header__link {
+        font-size: 15px;
+        line-height: 20px;
+        color: #676770;
+    }
+    
+    .header__inner {
+        background-image: url(../../sourse/bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 80px;
+    }
+    
+    .header__title {
+        padding-top: 184px;
+        font-size: 59px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 106px;
+    }
+    
+    .header__info-list {
+        display: flex;
+        padding-bottom: 200px;
+        justify-content: center;
+    }
+    
+    .header__info-item {
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    
+    .info-item {
+        background: #69B9FF;
+        margin-right: 20px;
+    }
+    
+    .what__flex {
+        display: flex;
+        justify-content: space-between;
+    }
