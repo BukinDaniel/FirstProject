@@ -17,7 +17,7 @@
     }
     
     .header__logo {
-        margin-right: 613px;
+        margin-right: 1000px;
         font-size: 25px;
         line-height: 25px;
         letter-spacing: 4px;
@@ -42,7 +42,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        margin-bottom: 800px; //тут было 80
+        margin-bottom: 80px;
     }
     
     .header__title {
@@ -76,14 +76,3 @@
     .header__info-link {
         color: white;
     }
-    
-    .info-item {
-        margin-right: 20px;
-    }
-    
-    .what__flex {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .header__main:active {}

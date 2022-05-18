@@ -101,7 +101,7 @@ body {
 }
 
 .header__logo {
-  margin-right: 613px;
+  margin-right: 1000px;
   font-size: 25px;
   line-height: 25px;
   letter-spacing: 4px;
@@ -126,7 +126,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-bottom: 800px;
+  margin-bottom: 80px;
 }
 
 .header__title {
@@ -163,17 +163,4 @@ body {
 
 .header__info-link {
   color: white;
-}
-
-.info-item {
-  margin-right: 20px;
-}
-
-.what__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }

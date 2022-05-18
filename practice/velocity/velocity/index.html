@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../velocity/css/style.css">
+
     <title>Путешествия по Подмосковью</title>
 </head>
 
@@ -16,29 +17,57 @@
                 <ul class="header__list">
                     <li class="header__logo">ППП</li>
                     <li class="header__link--blue"><a class="header__main" href="#what"> Главная</a></li>
-                    <li class="header__link">Контакты</li>
+                    <li class="header__link"><a class="header__contact" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="container">
-            <div class="header__inner">
-                <div class="header__title">Путешествия по Подмосковью</div>
-                <div class="header__info">
-                    <ul class="header__info-list">
-                        <li class="header__info-item info-item">
-                            <a href="#" class="header__info-link"> Туры</a></li>
-                        <li class="header__info-item">
-                            <a href="#" class="header__info-link">Подробнее о нас</a></li>
-                    </ul>
-                </div>
+    </header>
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__title">Путешествия по Подмосковью</div>
+            <div class="header__info">
+                <ul class="header__info-list">
+                    <li class="header__info-item info-item">
+                        <a href="#" class="header__info-link"> Туры</a></li>
+                    <li class="header__info-item">
+                        <a href="#" class="header__info-link">Подробнее о нас</a></li>
+                </ul>
             </div>
         </div>
-        <div class="what">
-            <div class="container">
-                <div id="what" class="what__tiile"> what we do</div>
-                <div class="what__subtitle">This is some text inside of a div block.</div>
-            </div>
-    </header>
+    </div>
+    <div class="what">
+        <div class="container">
+            <div id="what" class="what__title"> what we do</div>
+            <div class="what__subtitle">asf</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div id="contacts" class="footer__contact">
+            <a href="tel:+79162586162">+79162586162</a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#menu").on("click", "a", function(event) {
+                //отменяем стандартную обработку нажатия по ссылке
+                event.preventDefault();
+
+                //забираем идентификатор бока с атрибута href
+                var id = $(this).attr('href'),
+
+                    //узнаем высоту от начала страницы до блока на который ссылается якорь
+                    top = $(id).offset().top;
+
+                //анимируем переход на расстояние - top за 1500 мс
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+        });
+    </script>
 </body>
 
 </html>
