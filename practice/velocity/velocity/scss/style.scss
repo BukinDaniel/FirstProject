@@ -7,7 +7,7 @@
     }
     
     .container {
-        max-width: 940px;
+        max-width: 1540px;
         margin: 0 auto;
     }
     
@@ -38,21 +38,21 @@
     }
     
     .header__inner {
-        background-image: url(../../sourse/bg.png);
+        background-image: url(../../sourse/lavra.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        margin-bottom: 80px;
+        margin-bottom: 800px; //тут было 80
     }
     
     .header__title {
-        padding-top: 184px;
+        padding-top: 304px;
         font-size: 59px;
         line-height: 60px;
         text-align: center;
         letter-spacing: 4px;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: white;
         margin-bottom: 106px;
     }
     
@@ -63,19 +63,21 @@
     }
     
     .header__info-item {
-        font-size: 16px;
+        font-size: 36px;
         line-height: 21px;
         text-align: center;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: #FFFFFF;
-        border: 1px solid #fff;
         border-radius: 4px;
         padding: 10px;
+        margin-left: 50px;
+    }
+    
+    .header__info-link {
+        color: white;
     }
     
     .info-item {
-        background: #69B9FF;
         margin-right: 20px;
     }
     
@@ -83,3 +85,5 @@
         display: flex;
         justify-content: space-between;
     }
+    
+    .header__main:active {}
