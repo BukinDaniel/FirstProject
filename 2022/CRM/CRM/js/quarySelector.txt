@@ -9,4 +9,37 @@
 соответствующий данному CSS-селектору.
 
 4.Метод elem.matches(css) проверяет, удовлетворяет ли elem CSS-селектору и
-возвращает true или false. Удобно для переборке в массиве/коллекции.
+возвращает true или false. Удобно для переборке в массиве/коллекции:
+ for (let elem of document.body.children) {
+    if (elem.matches('a[href$="zip"]')) {
+      alert("Ссылка на архив: " + elem.href );
+    }
+  }
+ - ищет ссылочный селектор,который содержит zip.
+
+5.Метод elem.closest(css) ищет ближайшего предка, который соответствует CSS-селектору. 
+Сам элемент также включается в поиск :
+
+<h1>Содержание</h1>
+<div class="contents">
+  <ul class="book">
+    <li class="chapter">Глава 1</li>
+    <li class="chapter">Глава 2</li>
+  </ul>
+</div>
+<script>
+  let chapter = document.querySelector('.chapter'); // LI
+  alert(chapter.closest('.book')); // UL
+  alert(chapter.closest('.contents')); // DIV
+  alert(chapter.closest('h1')); // null (потому что h1 - не предок)
+</script>
+
+6.elem.getElementsByTagName(tag) ищет элементы с данным тегом и возвращает 
+их коллекцию.Передав "*" вместо тега, можно получить всех потомков.
+
+7.elem.getElementsByClassName(className) возвращает элементы, 
+которые имеют данный CSS-класс.
+
+Чаще используют quetySelectorAll.
+Но он не обновляет коллекцию динамически, в отличии,
+например от getElementsByClassName
