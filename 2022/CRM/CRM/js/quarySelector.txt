@@ -1,0 +1,12 @@
+1.Если у элемента есть атрибут id - можем получить его вызовом document.getElementById(id), 
+где бы он ни находился : let elem = document.getElementById('elem').
+
+2.Самый универсальный метод поиска – это elem.querySelectorAll(css).
+Он возвращает все элементы внутри elem, удовлетворяющие данному CSS-селектору:
+ let elements = document.querySelectorAll('ul > li:last-child');
+
+3.Метод elem.querySelector(css) возвращает первый элемент, 
+соответствующий данному CSS-селектору.
+
+4.Метод elem.matches(css) проверяет, удовлетворяет ли elem CSS-селектору и
+возвращает true или false. Удобно для переборке в массиве/коллекции.
