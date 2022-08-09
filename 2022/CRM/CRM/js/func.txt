@@ -1,0 +1,68 @@
+Function Declaration (объявление функции):
+function имя(параметры) {тело функции}
+Имя функции - глагол. Характиризует действие тела функции:
+show...-показать,get...-возвратить значение,calc...- вычислить, create...- создают и т.д.
+Пример:
+function showMessage() {
+console.log ('Сообщение');}
+//Вызов функции:
+showMessage ();
+
+Функцию можно запускать как после её объявление, так и перед (при чем несколько раз).
+
+Переменную, объявленную внутри функции(локальную) нельзя прочитать вне функции.
+Если объявить переменную за пределами функции(глобальная), то её будет видно везде.
+Глобальные, по возможности, стараются не использовать.
+
+Пример функции с параметрами:
+function calcSumm(numOne,numTwo) {
+console.log(`Переменная первая:${numOne}`);
+console.log(`Переменная вторая:${numTwo}`);
+let numSumm= numOne + numTwo;
+console.log(`Сумма:${numSumm}`);
+//Вызов функции:
+calcSumm (1,2);
+
+Function Expression (функциональное выражение):
+let переменная = function() {тело функции};
+Пример:
+let showMessage = function() {
+console.log('Hi!');
+}; (!!!В конце обязателен символ ;)
+//Вызов
+showMessage();
+
+Отличие от Function Declaration - вызов возможен только после создания Function Expression
+
+Упрощенный синтаксис Function Expression - стрелочная функция:
+let имяпеременной = (параметры) => выражение
+Пример:
+let getMessage = (text, name) => text + ', ' + name + '!';
+console.log(getMessage('Hi' , 'Vasya'));
+
+Так же есть многострочные стрелочные функции:
+let getMessage = (text, name) => {
+let message = text + ', ' + name + '!';
+return message;
+};
+console.log(getMessage('Hi' , 'Vasya'));
+
+Планирование setTimeout и SetInterval
+SetTimeout(функция или код, задержка, параметры); - вызов функции один раз спустя время
+SetInterval(функция или код, задержка, параметры);- вызов функции много раз спустя интервал
+Пример:
+function showMessage(text,name) {
+console.log (`${text}, ${name}`);}
+SetTimeout(showMessage,2000, 'Hi','Kirill'); //задержка в 2 секунды
+
+Остановка setTimeout через clearTimeout:
+function showNumber(num) {
+console.log (num);
+let TimeId = setTimeout(showNumber,1000,++num);
+if (num === 6)
+clearTimeout(TimeId);
+}
+SetTimeout(showNumber,1000, 1);
+
+c setInterval работает так же clearInterval
+
