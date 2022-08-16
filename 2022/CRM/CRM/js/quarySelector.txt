@@ -1,14 +1,53 @@
-1.Если у элемента есть атрибут id - можем получить его вызовом document.getElementById(id), 
+НАВИГАЦИЯ ПО DOM.
+Чтобы получить все дочерние узлы элемента body:
+const bodyElement = document.body;
+const childNodes = bodyElement.childNodes;
+console.log(childNodes); // результатом будет коллекция узлов (методы массивов работать не будут, для перебора коллекции используется метод for...of
+Пример:
+for ( let имяпеременной of имяконстантыузлов){
+console.log(имяпеременной);}
+
+Чтобы провести проверку на наличие дочерких узлов:
+console.log(bodyElement.hasChildNodes());
+
+Чтобы получить все дочерние элементы body:
+const bodyChildren = bodyElement.children;
+console.log(bodyChildren);
+
+ПОИСК ПО ДЕРЕВУ DOM.
+1.Самый универсальный метод поиска – это elem.querySelectorAll(css).
+Он возвращает все элементы внутри elem, удовлетворяющие данному CSS-селектору:
+1.1 По селектору класса: const ElemOne = document.querySelectorAll('.имякласса')
+1.2 По селектору тега: const ElemTwo = document.querySelectorAll('имятега')
+1.3 По смешанному селектору тега и класса: const ElemThree = document.querySelectorAll('имятэга.имякласса')
+1.4 По тэгу первого уровня вложенности: const ElemFout = document.querySelectorAll('.имякласса>имятэга')
+1.5 По селекторам нескольких классов: const ElemFive = document.querySelectorAll('.имякласса, .имякласса2 ')
+1.6 По вложенным классам: const ElemSix = document.querySelectorAll('.имякласса .имякласса2')
+1.7 По ID: const ElemSeven = document.querySelectorAll('#имяID')
+1.8 По атрибуту: const ElemEight = document.querySelectorAll('.имякласса')
+1.9 По атрибуту: const ElemNine = document.querySelectorAll('[имяатрибута]')
+1.10 По атрибуту со значением: const ElemTen = document.querySelectorAll('[имяатрибута="значение"]')
+
+2.Метод elem.querySelector(css) возвращает первый элемент, 
+соответствующий данному CSS-селектору. const ElemOne = document.querySelector('.имякласса') эквивалентно const ElemOne = document.querySelectorAll('.имякласса')[0];
+
+3.Если у элемента есть атрибут id - можем получить его вызовом document.getElementById(id), 
 где бы он ни находился : let elem = document.getElementById('elem').
 
-2.Самый универсальный метод поиска – это elem.querySelectorAll(css).
-Он возвращает все элементы внутри elem, удовлетворяющие данному CSS-селектору:
- let elements = document.querySelectorAll('ul > li:last-child');
+4.elem.getElementsByTagName(tag) ищет элементы с данным тегом и возвращает 
+их коллекцию.Передав "*" вместо тега, можно получить всех потомков.
 
-3.Метод elem.querySelector(css) возвращает первый элемент, 
-соответствующий данному CSS-селектору.
+5.elem.getElementsByClassName(className) возвращает элементы, 
+которые имеют данный CSS-класс.
 
-4.Метод elem.matches(css) проверяет, удовлетворяет ли elem CSS-селектору и
+6.elem.getElementsByName(name) возвращает элементы с заданным
+атрибутом name.
+
+Чаще используют quetySelectorAll.
+Но он не обновляет коллекцию динамически, в отличии,
+например от getElementsByClassName
+
+7.Метод elem.matches(css) проверяет, удовлетворяет ли elem CSS-селектору и
 возвращает true или false. Удобно для переборке в массиве/коллекции:
  for (let elem of document.body.children) {
     if (elem.matches('a[href$="zip"]')) {
@@ -16,8 +55,15 @@
     }
   }
  - ищет ссылочный селектор,который содержит zip.
+Или другой пример:
+ for (let elem of document.body.children) {
+    if (elem.matches('[class$= "lesson_item-list_red"]')) {
+      console.log('Красный');
+    }
+  }
+ - ищет ссылочный селектор,который содержит zip.
 
-5.Метод elem.closest(css) ищет ближайшего предка, который соответствует CSS-селектору. 
+8.Метод elem.closest(css) ищет ближайшего предка, который соответствует CSS-селектору. 
 Сам элемент также включается в поиск :
 
 <h1>Содержание</h1>
@@ -28,18 +74,9 @@
   </ul>
 </div>
 <script>
-  let chapter = document.querySelector('.chapter'); // LI
-  alert(chapter.closest('.book')); // UL
-  alert(chapter.closest('.contents')); // DIV
-  alert(chapter.closest('h1')); // null (потому что h1 - не предок)
+  let FindChapter = document.querySelector('.chapter'); // LI
+  alert(FindChapter.closest('.book')); // UL (просим найти родителя для класса chapter с классом book)
+  alert(FindChapter.closest('.contents')); // DIV (просим найти родителя для класса chapter с классом contents)
+  alert(FindChapter.closest('h1')); // null (потому что h1 - не предок)
 </script>
 
-6.elem.getElementsByTagName(tag) ищет элементы с данным тегом и возвращает 
-их коллекцию.Передав "*" вместо тега, можно получить всех потомков.
-
-7.elem.getElementsByClassName(className) возвращает элементы, 
-которые имеют данный CSS-класс.
-
-Чаще используют quetySelectorAll.
-Но он не обновляет коллекцию динамически, в отличии,
-например от getElementsByClassName
