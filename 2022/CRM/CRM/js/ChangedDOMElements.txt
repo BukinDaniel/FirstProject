@@ -33,3 +33,22 @@ newElement.innerHTML = 'Здарова, <span class="slave"> раб </span>';
 2.2. после объекта - .after: textElement.after(newElement);
 2.3. внутрь и вначало объекта - .prepend: textElement.prepend(newElement);
 2.4. внутрь и конец объекта - .append: textElement.append(newElement);
+
+Если мы хотим вставить строку с HTML тегами, как это делает innerHTML - .insertAdjacentHTML
+Пример:
+textElement.insertAdjacentHTML(
+'afterend',
+`<p> Живи и <span class="black">умри </span>`);
+beforebegin - вставить html непосредственно перед textElement
+afterbegin - вставить html в начало textElement
+beforeend - вставить html в конец textElement
+afterend - вставить html непосредсвенно послеtextElement
+
+Метод клонирования(копирования) объекта на странице .cloneNode() :
+const textElement = document.querySelector('lesson_text');
+const cloneTextElem = text.Element.cloneNode();
+//глубокое копирование вместе с содержимым const cloneTextElem = text.Element.cloneNode(true);
+const lessonBlock = document.querySelector('.lesson');
+lessonBlock.append(cloneTextElem); // вставка склонированного элемента
+
+Для удаление используется .remove()

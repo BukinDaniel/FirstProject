@@ -1,0 +1,26 @@
+ИЗМЕНЕНИЕ СТИЛЕЙ И КЛАССОВ ЧЕРЕЗ JS(DOM).
+
+Свойство classList
+Специальный объект с методами для добавления/удаления одного класса
+
+Берем объект: const element = document.querySelector('.lesson_item-list_red');
+
+1. element.classlist.add('active); // добаляет класс .add
+2. element.classlist.remove('active); // удаляет класс .remove
+3. element.classlist.toggle('active); // добавляет класс, если нет, а если есть удалить - .toggle
+4. element.classlist.contains('active); // проверяет наличие класс, возвращает true/false - .contains
+
+Управление стилями .style
+Каждое css свойство надо будет писать отдельно elem.style.color = "red" и тд
+
+Если мы хотим записать множество css свойств сразу - style.cssText
+elem.style.cssText = `
+margin-bottom : 30px;
+color:red;
+`;
+
+Вычисление стилей getComputedStyle. Работает только для чтения.
+const element = document.querySelector('.lesson_item-list_red');
+const elementStyle = getComputedStyle(element);
+console.log(elementStyle.fontSize);
+Так же можно получить стили псевдоэлемента указав его вторым параметром - getComputedStyle(element, "::before");
