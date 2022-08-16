@@ -1,0 +1,35 @@
+ИЗМЕНЕНИЕ КОНТЕНТА DOM ЭЛЕМЕНТОВ.
+Получение объекта:
+//textElement и textElementContent - произвольные переменные.
+const textElement = document.querySelector('.lesson_text');
+const textElementContent = textElemets.innerHTML; // получение содержимого объекта "как есть" вместе с HTML тегами.
+Изменение объекта .innerHTML:
+textElement.innerHTML = 'Живи, а работай когда всегда';
+
+Содержимое элемента целиком .outerHTML:
+const textElementContent = textElemets.outerHTML;
+Отличия от inner :
+1. получаем и объект, и содержимое
+2. при изменении контента перезаписывает предыдущие значения элементов.
+
+Управление текстом элемента .textContent:
+const textElement = document.querySelector('.lesson_text');
+const textElementContent = textElemets.textContent;
+При выводе не покажет HTML тэгов. Только текст. При изменение контента, на странице увидим тэги в виде строки.(лучше не изменять контент данным способом)
+
+Для создания элемента(тэга) .createElement ('имятэга'):
+const newElement = document.createElement('div');
+Может наполнить его контентом:
+newElement.innerHTML = 'Здарова, <span class="slave"> раб </span>';
+
+Для создания узла(например текстового) .createTextNode('Пример')
+
+Все эти(те что выше) объекты находятся в const и не являются сейчас текстом документа.
+Чтобы их туда вставить подярок следующий:
+1. Получаем объект с которым хотим взаимодейтсвовать: const textElement = document.querySelector('.lesson_text');
+2. Создаем элемент и наполняем его текстом( выше это уже сделали : const newElement = document.createElement('div'); и тд)
+Используем:
+2.1. перед объектом - .before: textElement.before(newElement);
+2.2. после объекта - .after: textElement.after(newElement);
+2.3. внутрь и вначало объекта - .prepend: textElement.prepend(newElement);
+2.4. внутрь и конец объекта - .append: textElement.append(newElement);
