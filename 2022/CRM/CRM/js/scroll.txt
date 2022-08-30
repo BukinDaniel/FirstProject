@@ -1,0 +1,4 @@
+Чтобы получить ширину и высоту окна:
+const имяпеременной(например,mainElement) = document.documentElement;
+const имяпеременной1(допустим,mainElementWidth)= mainElement.clientWidth;
+const имяпеременной2(допустим,mainElementHeight)= mainElement.clientWidth;
