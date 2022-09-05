@@ -3,3 +3,22 @@
 //Получаем объект
 const block = document.querySelector(.'lesson__block')
 Внешними его метриками являются offsetLeft и offsetTop, которые вернут положение нашего объекта слева и сверху относительно ближайшего родительского (offsetParent).
+const elementOffsetParent = block.offsetParent;
+Это будет ближайший предок, который удовлетвояет следующим условиям:
+1. Является css-позиционированным (css-свойство position равно absolute,relative и т.д)
+2. теги td, th, table
+3. body
+console.log (elementOffsetParent);
+Ситуации в которых offstParent равно null:
+1. Для скрытых элементов (с css свойством display: none или когда его нет в документе)
+2. Для элементов body и html.
+3. Для элементов с position : fixed.
+
+Получаем родительский элемент относительно которого позицианирован наш объект
+const elementOffsetParent = block.offsetParent;
+console.log(elementPffsetParent);
+//Получаем позицию объекта относительно предка (offsetParent)
+const elementOffsetLeft = block.offsetLeft;
+const elementOffsetTop = block.offsetTop;
+console.log(elementOffsetLeft);
+console.log(elemtnOffsetTop);
