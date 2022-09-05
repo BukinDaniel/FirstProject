@@ -43,3 +43,21 @@ function setScrollToOptions(){
 	});
 }
 
+Метод scrollIntoView(top) прокручивает страницу, чтобы elem оказался вверху. У него есть один аргумент:
+- если top = true(по умолчанию), то страница будет прокручена,чтобы elem появился в верхней части окна. Верхний край элемента совмещен с верхней частью окна.
+- если top = false, то страница будет прокручена, чтобы elem появился внизу. Ниний край элемента будет ссовмещен с нижнеим краем окна.
+
+function setScrollIntoView(top) {
+	const lessonSelected = document.querySelector('/lesson_selected');
+	lessonSelected.scrollIntoView(top);
+}
+так же у этого метода есть опции, также не работают в сафаре, единственное что, другие опции:
+block: "center" //так же может быть star end или nearest отвечает за вертикальное позиционированние
+inline: "center" //так же может быть star end или nearest отвечает за горизонтальное позиционированние
+behavior: "smooth" 
+
+Запретить прокрутку окна браузера:
+fuction setEnableDisableScroll(){
+	//document.body.style.overflow = "hidden";
+	document.body.classList.toggle('scroll-lock'); // для того чтобы так работало в css надо добавить параметр body.scroll-lock{overflow: hidden;}
+Для прокрутки страницы из JavaScript её DOM должен быть полностью построен. Например, если мы попытаемя прокрутить страницу из скрипта в head, это не сработает.
