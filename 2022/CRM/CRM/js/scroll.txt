@@ -2,3 +2,44 @@
 const имяпеременной(например,mainElement) = document.documentElement;
 const имяпеременной1(допустим,mainElementWidth)= mainElement.clientWidth;
 const имяпеременной2(допустим,mainElementHeight)= mainElement.clientWidth;
+console.log(mainElementWidth); // выведет ширину окна.
+
+Ширина и высота окна вместе с полосами прокрутки( теми самыми, сбоку браузера)
+const WindiwHeight = window.innerHeight;
+const WindiwWidth = window.innerWidth;
+
+Ширина и высота документа, включая прокрученную область:
+let scrollWidth = Math.max(document.body.scrollWidth, document.documentElement.scrollWidth,
+document.body.offsetWidth, document.documentElement.offsetWidth, 
+document.body.clientWidth, document.documentElement.clientWidth)  // в высоту также, только Width меняем на Height.
+
+Получить количество прокрученных пикселей(только для чтения)
+const windowScrollTop = window.pageYOffset;
+const windowScrollLeft = window.pageXOffset;
+
+Управление прокруткой страницы:
+1.Метод scrollBy(x,y) прокручивает страницу относительно её текущего положения
+
+function setScrollBy(){
+	window.scrollBy(0, 50);
+	const windowScrollTop = window.pageYOffset;
+	console.log(windowScrollTop);
+}
+
+2. Метод ScrollTo(pageX, pageY) прокручивает страницу на абсолютные координаты(те, чо заданы в параметрах). Тоже самое что и window.scroll()
+function setScrollTo(){
+	window.scrollTo(0,50);
+	const windowScrollTop = window.pageYOffset;
+	console.log(windowScrollTop);
+}
+
+Метод scrollTo + опции имеет следующий синтаксис(опции не работают в сафари):
+function setScrollToOptions(){
+	window.scrollTo({
+	top: 500,
+	left: 0,
+// smooth, instant, либо auto (по умолчанию auto)
+	behavior : "smooth" // behavior - параметр отвечающий за тип прокрутки. smooth - плавная прокрутка.
+	});
+}
+
