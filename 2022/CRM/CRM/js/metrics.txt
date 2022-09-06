@@ -16,9 +16,47 @@ console.log (elementOffsetParent);
 
 Получаем родительский элемент относительно которого позицианирован наш объект
 const elementOffsetParent = block.offsetParent;
-console.log(elementPffsetParent);
+console.log(elementOffsetParent);
 //Получаем позицию объекта относительно предка (offsetParent)
 const elementOffsetLeft = block.offsetLeft;
 const elementOffsetTop = block.offsetTop;
 console.log(elementOffsetLeft);
-console.log(elemtnOffsetTop);
+console.log(elementOffsetTop);
+
+//Получаем общие размеры объекта
+const block = document.querySelector('.lesson__block');
+// Как раз с помощью offsetWidth и offsetHeight
+const elementOffsetWidth = block.offsetWidth;
+const elementOffsetHeight = block.offsetHeight;
+console.log(elementOffsetWidth);
+console.log(elementOffsetHeight);
+
+//Отступы внутренней части элементов от внешней с помощью clientTop и clientLeft
+const block = document.querySelector('.lesson__block');
+const elementclientTop = block.clientTop;
+const elementclientLeft = block.clientLeft;
+console.log(elementclientTop);
+console.log(elementclientLeft);
+
+//Размеры объекта без рамок и полосы прокрутки с помощью clientWidth и clientHeight
+Синтаксис, как и в предыдущих двух примерах
+
+//Размеры включающие в себя прокрученную (которую не было видно) часть. В Остальном работают как clientWidth и clientHeight.  Делается это с помощью scrollWidth и scrollHeight
+Синтаксис, как и в предыдущих примерах
+
+//Размеры прокрученной области с помощью scrollTop и scrollLeft.
+Синтаксис, как и в предыдущих примерах. Эти свойства работают не только для чтения!(можно задать изначально прокрученную часть)
+
+Методы управления прокруткой (scrollBy,scrollTo, scrollIntoView) работают и для объекта.
+
+Получать размеры объектов стоит получать именно этими методами, а не getComputedStyle.
+
+//Получаем кординаты относительно окна браузера с помощью getBoundClientRect();
+const item = document.querySelector('.lesson__block');
+const getItemCoords = item.getBoundClientRect();
+console.log(getItemCoords);
+Можно получить конкретную координату :
+const getItemCoords = item.getBoundClientRect().left;
+
+//Получаем координаты относительно документа
+Чтобы это сделать нам к const getItemTopCoords = item.getBoundClientRect().Top; надо прибавить window.pageYOffset (это что касается вертикали)
