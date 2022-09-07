@@ -59,4 +59,9 @@ console.log(getItemCoords);
 const getItemCoords = item.getBoundClientRect().left;
 
 //Получаем координаты относительно документа
-Чтобы это сделать нам к const getItemTopCoords = item.getBoundClientRect().Top; надо прибавить window.pageYOffset (это что касается вертикали)
+Чтобы это сделать нам к const getItemTopCoords = item.getBoundClientRect().Top; надо прибавить window.pageYOffset (количество прокрученных пикселей)
+Так же и с Left и pageXOffset работает по горизонтали.
+
+//Получаем объект по координатам с помощью document.elementFromPoint(x,y);
+const elem = document.elementFromPoint(100,100);
+Эти координаты считаются относительно окна браузера.
