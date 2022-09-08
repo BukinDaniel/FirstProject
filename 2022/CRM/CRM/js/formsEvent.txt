@@ -1,0 +1,80 @@
+События focus и blur
+Когда мы что-то хотим ввести в поле ввода и кликаем туда мышкой (или еще как-то там оказываемся) - это focus
+Когда уходим с этого поля - это blur
+Можно добавить собития к этим моментам, например в момент фокуса убрать placeholder (который заранее установлен в html), а в момент blur, если поле так и не было заполнено
+вернуть этот placeholder.
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+cont mainFormInputPlaceholder = mainFormInput.placeholder;
+mainFormInput.addEventListener("focus" , function(e) {
+	mainformInput.placeholder = "";
+});
+mainFormInput.addEventListener("blur" , function(e) {
+	mainformInput.placeholder = mainFormInputPlaceholder;
+});
+
+Есть еще и методы focus и blur. С помощью них можно управлять фокусировкой того или иного элемента
+Например:
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+mainFormInput.focus();
+setTimeout(() => {
+	mainFormInput.blur();
+}, 3000);
+Эта функция при обновлении(или входе) на страницу установит фокус на поле ввода и уберет его спустя 3 секунды.
+
+Событие change. Срабатывает по окончанию изменения элемента.
+onst mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+mainFormInput.addEventListener("change" , function(e) {
+	console.log(' сработало change в input');
+});
+Синтаксис с кнопками и файлами такой же, но код в них сработает сразу, в то время, как у Инпута срабатывает при потере фокуса на элементе
+
+Событие input. Срабатывает каждый раз при изменении значения. В отличии от событий клавиатуры, оно сработает при любых изменениях значений, даже если они не связаны
+с клавиатурными действиями : вставка с помощью мыши или распознование речи при диктовке текста.
+Пример
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+mainFormInput.addEventListener("input", function(event){
+	console.log(`value: ${mainFormInput.value}`);
+});
+
+События cut, copy, paste. События происходят при вырезании/копировании/вставки текста.
+Пример
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+mainFormInput.addEventListener("copy", function(event){
+	console.log(`Копируем`);
+});
+mainFormInput.addEventListener("paste", function(event){
+	console.log(`Вставляем`);
+});
+mainFormInput.addEventListener("cut", function(event){
+	console.log(`Вырезаем`);
+});
+
+Можно установить запрет на вставку, например
+mainFormInput.addEventListener("paste", function(event){
+	console.log(`Нельзя вставить`);
+	event.prevetDefault();
+});
+
+Событие и метод submit. Срабатывает при отправке формы, используется для проверки формы перед отправкой на сервер или для предотвращения отправки и обработки её на 
+JS
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+mainForm.addEventListener("submit", function(event){
+	console.log(`Форма отправляется...`);
+ 	  if(!mainFormInput.value) {
+		console.log(`Поле не заполнено`);
+		event.prevetDefault();
+	}
+});
+
+Чтобы отправить форму на сервер вручную, используется метод form.submit()
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+mainFormInput.addEventListener("blur", function(e){ // при потере фокуса у поля ввода форма отправится
+	mainForm.submit();
+});
