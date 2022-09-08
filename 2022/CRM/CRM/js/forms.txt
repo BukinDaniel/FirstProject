@@ -1,0 +1,101 @@
+Свойства и методы форм
+Коллекция всех форм на страницу
+document.forms
+
+Получить коллекцию всех форм на странице
+console.log(document.forms);
+
+Получить конкретную форму на странице
+const mainForm(произвольная переменная) = document.forms[0];
+console.log(mainForm);
+
+Атрибут name (нужно присвоить форме в html атрибут name, например с именем main)
+const mainForm (произвольная переменная) = document.forms.main;
+console.log(mainForm);
+
+Элементы форм.
+const mainForm = document.forms.main;
+console.log(mainForm.elements);
+
+В html коде, когда мы добавляем элементы формы, мы присваиваем им имена name. С ними и необходимо работать в JS, чтобы получить к ним доступ.
+Получаем элемент с именем nameInput
+const mainFormInput = mainForm.elements.nameInput; //можно убрать .elements, результат будет тот же
+console.log(mainFormInput);
+
+Получаем коллекцию с именем nameRadio
+const mainFormRadioButtons = mainForm.nameRadio;
+console.log(mainFormRadioButtons);
+
+Получаем форму элемента (если нужно найти родительский элемент объекта формы)
+console.log(mainFormInput.form); // mainFormInput - пример переменной выше
+
+Работа с Input и TextArea
+Значение можно получить через свойство input.value или input.checked для чекбоксов и радиокнопок
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput; 
+const mainFormTextArea = mainForm.nameTextArea; 
+
+Получить значение поля 
+console.log(mainFormInput.value);
+console.log(mainFormTextArea.value);
+
+Присвоить значение поля
+mainFormInput.value = "By!";
+mainFormTextArea.value = "Loser";
+
+С радио кнопками чуть интереснее, ведь они являются коллекцией
+const mainFormRadio = mainForm.nameRadio;
+Получаить значение поля type radio // представим, что у нас только 2 радиокнопки в коллекции
+console.log(mainFormRadio[0].value); // on(по умолчанию) если мы заранее не выставили значение в html , что она off
+console.log(mainFormRadio[1].value); 
+console.log(mainFormRadio[0].checked); // true или false в зависимости от того, выставлен ли в html атрибут checked
+console.log(mainFormRadio[1].checked);
+
+Назначить значение поля radio
+mainFormRadio[0].value = "left";
+mainFormRadio[1].value = "right";
+mainFormRadio[1].checked = "true";
+
+Чекбоксы // выводы по логике такие же у Radio
+const mainFormCheckBox = mainForm.nameCheck;
+console.log(mainFormCheckBox.value);
+console.log(mainFormCheckBox.checked);
+
+Назначить значение поля checkbox
+mainFormCheckBox.value = "save";
+mainFormCheckBox.checked = "true";
+
+Input type file (то, где мы можем выбрать какой-то документ или файл для загрузки)
+const mainFormFile = mainForm.nameFile;
+console.log(mainFormFile.value);
+Файлу нельзя назначить value, только очистить его (передать пустую строку).
+
+Работа с select и option (выпадающий список)
+3 важных свойства: 1) select.options - коллекция подэлементов <option>; 2)select.value - значение выбранного <option>; 3) select.selectedIndex - номер выбранного <option>
+
+Получаем все options
+const mainFormSelect = mainForm.nameSelect;
+console.log(mainFormSelect.options);
+
+Получаем индекс выбранного option
+const mainFormSelectIndex = mainFormSelect.selectedIndex;
+console.log(mainFormSelectIndex);
+
+Получаем значение выбранного option
+const mainFormSelectValue = mainFormSelect.value;
+console.log(mainFormSelectValue);
+
+Получаем текст выбранного option
+const mainFormSelectText = mainForm.Select.options[mainFormSelectIndex].text;
+console.log(mainFormSelectText);
+
+Если мы хотим взаимодействовать с select из JS
+mainFormSelect.options[1].selected = true; // выбранным значением по умолчанию будет 2ой элемент выпадающего списка
+mainFormSelect.selectedIndex = 1; // тоже самое что и выше 
+mainFormSelect.value = 2; // тоже самое
+
+Так же можно добавить новую опцию нашему выпадающему списку
+option = new Option (text,value,defaultSelected, selected); // text - текст вснутри option , value - значение , defaultSelected - если true, то ставится html атрибут selected, selected -
+						   // - если true , то элемент <option> будет выбранным.
+Пример let newOption = new Option("100", "4", false, false);
+mainFormSelect.append(newOption);
