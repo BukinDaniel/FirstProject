@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- *Подключение гугл шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <title>Яркий макет Landing</title>
+</head>
+<!-- * Данный макет будет разработан на БЭМ, внимательно смотрим и учимся. Успехов! :) -->
+<!-- * Общие "фишки" для макетов: -->
+<!--!1.Если на сайте есть телефон, его записываем через тег <a> и href= "tel: номер телефона". это позволит пользователю с мобильника сразу "набрать" этот номер при нажатии-->
+<!--!2.Для таких "крутых парней" как логотип используется отдельный блок(по БЭМ'у) т.к. он может использоваться еще где-то на странице  -->
+<!--!3.Для навигации(nav) такая же тема как для логотипа. -->
+<!--!4. Не забывать пользоваться "быстрыми" записями. Пример: li.menu_item*5>a.menu__link - создаст 5 элементов списка внутри которых ссылка-->
+
+<body>
+    <!-- Создаем header  (первый блок на странице)-->
+    <header class="header">
+        <!-- container нужен для ограничения контента по ширине на странице (в нашем случае 1035 px будет в css) -->
+        <div class="container">
+            <!-- Элемент который будет являться родительский блоком для следующий 3х элементов которые содержаться здесь. (Удобно для флексов) -->
+            <div class="header__inner">
+                <div class="header__up">
+                    <!--* для лого не учитывается header__, а для img внутри logo нужен logo потому что лого может использоваться где-то еще на сайте и мы просто перенесём его -->
+                    <a class="logo" href="#"> <img class="logo__img" src="/img/logo.png" alt=""></a>
+                    <nav class="menu">
+                        <!--* Меню(навигацию) удобнее  делать через список, а элементы списка - ссылки,чтобы при нажатии на них нас "прокатывало" до нужного места на странице-->
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <!--? Здесь потом сделать модификатор -->
+                                <a class="menu__link purple" href="#">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">About</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Work</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Blog</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <h1 class="header__tittle">Hi there! We are the new kids on the block and we build awesome websites and mobile apps.
+                </h1>
+                <div class="header__button">
+                    <a class="header__btn" href="#">work with us!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+</body>
+
+</html>
