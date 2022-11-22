@@ -63,7 +63,6 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
-  color: inherit;
 }
 
 a:hover {
@@ -92,6 +91,11 @@ h6 {
 /*
 паддинги для отступов от краев(верхний - экрана, нижний- элемента)
 aic - для центрирования по горизонтали*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header__inner {
   min-height: 100vh;
   display: -webkit-box;
@@ -116,6 +120,10 @@ aic - для центрирования по горизонтали*/
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: #FFFFFF;
+  padding: 16px 0 49px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu {
@@ -126,7 +134,31 @@ aic - для центрирования по горизонтали*/
   margin-left: 19px;
   padding: 13px 31px;
   background-color: #886239;
-  border-radius: 40px;
+  border-radius: 22px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 27px 0 24px;
+}
+
+.logo {
+  margin-bottom: 15px;
+}
+
+.menu__link {
+  font-size: 16px;
+}
+
+.link-shadow {
+  text-shadow: 0px 4px 4px #000000;
 }
 
 /*Общие правила: 
@@ -140,7 +172,6 @@ body {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: #1F1F1F;
 }
 
 .header {
@@ -157,4 +188,35 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 130%;
+  text-align: center;
+  margin-bottom: auto;
+}
+
+.header__description {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 140%;
+  max-width: 422px;
+}
+
+.header__btn {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 19px 55px 20px 54px;
+  background-color: #886239;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.header__arrow {
+  text-align: center;
 }
