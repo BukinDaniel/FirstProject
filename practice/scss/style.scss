@@ -14,6 +14,14 @@ body {
     font-size: 16px;
     line-height: 18px;
     font-weight: 400;
+    color: #1F1E1E;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
 }
 
 .header {
@@ -66,4 +74,50 @@ body {
 
 .header__arrow {
     text-align: center;
+}
+
+.country {
+    padding: 100px;
+}
+
+// grid-dap - отступы элементов друг от друга
+.country__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+}
+
+.country__text {
+    border: 1px solid #D9D9DE;
+    border-top: none;
+    padding: 12px 19px 19px;
+}
+
+.direction {
+    background: url(/img/fondirection.png);
+    background-color: #886239;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    padding: 32px 0px 51px;
+}
+
+.direction__header {
+    color: #FFFFFF;
+    margin-bottom: 52px;
+}
+
+.direction__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 53px 67px;
+}
+
+.direction__img {
+    margin-bottom: 15px;
+}
+
+.direction__text {
+    color: #FFFFFF;
+    line-height: 21px;
 }
