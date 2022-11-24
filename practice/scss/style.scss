@@ -18,8 +18,8 @@ body {
 }
 
 .title {
-    font-weight: 500;
     font-size: 36px;
+    font-weight: 500;
     line-height: 130%;
     text-align: center;
 }
@@ -45,19 +45,19 @@ body {
 // tac - по центру 
 // mb auto оттолкнуться
 .header__title {
-    font-weight: 700;
     font-size: 90px;
+    font-weight: 700;
     line-height: 130%;
     text-align: center;
     margin-bottom: auto;
 }
 
 .header__description {
-    font-weight: 700;
     font-size: 20px;
-    margin-bottom: 20px;
+    font-weight: 700;
     line-height: 140%;
     max-width: 422px;
+    margin-bottom: 20px;
 }
 
 // так как наша кнопка - ссылка, то надо сделать её блоком :inline=block
@@ -77,7 +77,7 @@ body {
 }
 
 .country {
-    padding: 100px;
+    padding: 100px 0px;
 }
 
 // grid-dap - отступы элементов друг от друга
@@ -120,4 +120,64 @@ body {
 .direction__text {
     color: #FFFFFF;
     line-height: 21px;
+}
+
+.offers {
+    padding: 100px 0px;
+}
+
+.offers__header {
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 40px;
+}
+
+.offers__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 32px;
+    padding-bottom: 82px;
+    border-bottom: 1px solid #D9D9DE;
+}
+
+.offers__link {
+    color: #FFFFFF;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 16px 24px 19px;
+    min-height: 256px;
+}
+
+// Обращение к большим элементам (3 и 6)
+.offers__link:nth-child(3),
+.offers__link:nth-child(6) {
+    grid-column: span 2; // начинается там где начинался и соединен в 2 колонки
+    grid-row: span 2; // так же, только со строками
+}
+
+.offers__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-bottom: 15px;
+}
+
+.offers__title--big {
+    font-size: 24px;
+}
+
+.offers__price {
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.offers__country,
+.offers__time {
+    margin-bottom: 15px;
 }
