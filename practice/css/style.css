@@ -346,3 +346,57 @@ body {
 .offers__time {
   margin-bottom: 15px;
 }
+
+.map {
+  padding-bottom: 100px;
+}
+
+.map__header {
+  margin-bottom: 46px;
+}
+
+.about-safari {
+  padding-bottom: 100px;
+}
+
+.about-safari__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 448px 640px;
+      grid-template-columns: 448px 640px;
+  grid-gap: 32px;
+}
+
+.about-safari__header {
+  text-align: left;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.about-safari__text {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 34px;
+}
+
+.about-safari__read {
+  color: #C4C4C4;
+  text-decoration: underline;
+}
+
+.about-safari__video {
+  background: url(/img/video.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

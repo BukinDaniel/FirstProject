@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
     <title>Сафари Landing</title>
 </head>
 <!-- * Данный макет будет разработан на БЭМ, внимательно смотрим и учимся. Успехов! :) -->
@@ -221,12 +222,43 @@
     </section>
     <section class="map">
         <div class="container">
-            <div class="map__header title">Карта Африки</div>
+            <h2 class="map__header title">Карта Африки</h2>
+            <!--* чтобы вставить карту, надо открыть гуглкарты, затем бургер,ссылка/код-- встраивание карт-->
+            <!-- если конкретный адрес - через поделится -->
+            <!-- карты гугл и яндекс платные, есть бесплатные openstreetmaps -->
+            <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11335991.786191666!2d30.531244416326253!3d-23.50369487230697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2sru!4v1669398815946!5m2!1sru!2sru" width="1120" height="609"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section class="about-safari">
+        <div class="container">
+            <div class="about-safari__inner">
+                <div class="about-safari__info">
+                    <h3 class="about-safari__header title">О сафари турах</h3>
+                    <p class="about-safari__text">Восточная и Южная Африка являются самыми популярными местами, где можно насладиться увлекательным путешествием, под названием сафари. Именно здесь созданы все условия, чтобы туристы могли почувствовать себя частичкой девственной природы
+                        Африки. Туры сафари в Африку характеризуются уникальными программами, в рамках которых туристы перемещаются на комфортабельных, специализированных автомобилях или автобусах.</p>
+                    <a class="about-safari__read" href="#">Читать подробней</a>
+                </div>
+                <!--* чтобы вставить видео надо: сделать ссылку с фоновой картинкой(пример ниже)-->
+                <!--* и плагин fancybox или бесплатный magnific popup -->
+                <div class="about-safari__video">
+                    <a class="about-safari__link" href="#">
+                        <img class="about-safari__image" src="img/link.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallary">
+        <div class="container">
+            <div class="gallary__inner">
+                <h3 class="gallary__header title">Фотогалерея</h3>
 
+            </div>
         </div>
     </section>
 
-
+    <script src="js/jquery.magnific-popup.min.js"></script>
 </body>
 
 </html>
