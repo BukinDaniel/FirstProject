@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- *Подключение гугл шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
     <title>Сафари Landing</title>
 </head>
 <!-- * Данный макет будет разработан на БЭМ, внимательно смотрим и учимся. Успехов! :) -->
@@ -251,16 +254,43 @@
     </section>
     <section class="gallary">
         <div class="container">
-            <div class="gallary__inner">
+            <div class="gallary__up">
                 <h3 class="gallary__header title">Фотогалерея</h3>
-
+                <a class="gallary__enter" href="">Перейти в раздел</a>
+            </div>
+            <!--* как сделать slider? -->
+            <div class="gallary__slider">
+                <div class="galary__item">
+                    <div class="galary__item-inner">
+                        <a class="galary__item-link" href="img/photo-1.png"><img class="galary__item-img" src="img/photo-1.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-2.png"><img class="galary__item-img" src="img/photo-2.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-3.png"><img class="galary__item-img" src="img/photo-3.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-4.png"><img class="galary__item-img" src="img/photo-4.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-5.png"><img class="galary__item-img" src="img/photo-5.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-6.png"><img class="galary__item-img" src="img/photo-6.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="galary__item">
+                    <div class="galary__item-inner">
+                        <a class="galary__item-link" href="img/photo-6.png"><img class="galary__item-img" src="img/photo-6.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-5.png"><img class="galary__item-img" src="img/photo-5.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-4.png"><img class="galary__item-img" src="img/photo-4.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-3.png"><img class="galary__item-img" src="img/photo-3.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-2.png"><img class="galary__item-img" src="img/photo-2.png" alt=""></a>
+                        <a class="galary__item-link" href="img/photo-1.png"><img class="galary__item-img" src="img/photo-1.png" alt=""></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- !ФАЙЛ JS И JQUERY ДОЛЖНЫ НАХОДИТСЯ ВЫШЕ ВСЕХ ОСТАЛЬНЫХ JS ФАЙЛОВ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/slick.min.js"></script>
+
 </body>
 
 </html>

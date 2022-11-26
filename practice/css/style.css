@@ -400,3 +400,48 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.gallary {
+  background-color: #886239;
+  padding: 49px 0px 106px;
+  color: #FFFFFF;
+}
+
+.gallary__up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+  padding-right: 160px;
+}
+
+.galary__item-inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+}
+
+.gallary__enter {
+  text-decoration: underline;
+}
+
+.slick-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: -85px;
+  right: 0;
+}
+
+.slick-prev {
+  right: 60px;
+}

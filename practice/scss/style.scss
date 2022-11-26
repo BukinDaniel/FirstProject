@@ -227,3 +227,41 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.gallary {
+    background-color: #886239;
+    padding: 49px 0px 106px;
+    color: #FFFFFF;
+}
+
+.gallary__up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-right: 160px;
+}
+
+.galary__item-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+}
+
+.gallary__enter {
+    text-decoration: underline;
+}
+
+// Кнопки(положене) регулируются путем отладки
+.slick-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -85px;
+    right: 0;
+}
+
+.slick-prev {
+    right: 60px;
+}
