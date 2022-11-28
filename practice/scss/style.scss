@@ -252,7 +252,7 @@ body {
     text-decoration: underline;
 }
 
-// Кнопки(положене) регулируются путем отладки
+// Кнопки(положение) регулируются путем отладки
 .slick-btn {
     background-color: transparent;
     border: none;
@@ -264,4 +264,50 @@ body {
 
 .slick-prev {
     right: 60px;
+}
+
+.premium {
+    padding: 100px 0px;
+}
+
+.premium__header {
+    margin-bottom: 77px;
+    text-transform: uppercase;
+}
+
+//Чтобы удобнее работать с текстом используй column-count
+.premium__inner {
+    column-count: 2;
+    column-gap: 46px;
+    padding-bottom: 50px;
+    margin-bottom: 44px;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.premium__paragraph {
+    margin-bottom: 15px;
+    span {
+        font-weight: 700;
+    }
+}
+
+.premium__footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 70px;
+}
+
+.premium__number {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 65px;
+    color: #886239;
+    text-align: center;
+}
+
+.premium__text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
 }
