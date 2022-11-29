@@ -1,0 +1,13 @@
+// adaptive media
+// Медиа запрос должен быть написан ниже того селектора, к которому он обращается
+@media (max-width:800px) {
+    .header__tel span {
+        display: none;
+    }
+}
+
+@media (max-width:560px) {
+    .header__title {
+        font-size: 50px;
+    }
+}

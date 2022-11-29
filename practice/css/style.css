@@ -225,6 +225,18 @@ a {
   display: block;
 }
 
+@media (max-width: 800px) {
+  .header__tel span {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .header__title {
+    font-size: 50px;
+  }
+}
+
 /*Общие правила: 
 1. при добавлении картинки чтобы задать ей всю высоты страницы используют min-height:100vh
 1.2. так же картинке прописывается no-repeat, когда она - фон
