@@ -1,0 +1,60 @@
+.footer {
+    background-color: #1f1e1e;
+    padding: 77px 0px 81px;
+}
+
+.footer__logo {
+    text-align: center;
+    margin-bottom: 69px;
+}
+
+.footer__us {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 130%;
+    max-width: 832px;
+    margin: 0 auto;
+}
+
+.footer__info {
+    width: 225px;
+}
+
+.footer__us-title {
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+
+.footer__copy {
+    margin-bottom: 3px;
+    opacity: 0.8;
+}
+
+.footer__link {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.footer__address {
+    width: 165px;
+}
+
+.footer__address-text {
+    opacity: 0.8;
+}
+
+.footer__contact {
+    width: 210px;
+}
+
+.footer__tel {
+    opacity: 0.8;
+}
+
+// db чтобы занимал всю ширину
+.footer__mail {
+    opacity: 0.8;
+    display: block;
+}
