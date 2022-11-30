@@ -25,24 +25,8 @@ $(function() {
         },
 
     });
-
-    // $('.galary__item-inner').magnificPopup({
-    //     delegate: 'a',
-    //     type: 'image',
-    //     closeOnContentClick: false,
-    //     closeBtnInside: false,
-    //     mainClass: 'mfp-with-zoom mfp-img-mobile',
-
-    //     gallery: {
-    //         enabled: true
-    //     },
-    //     zoom: {
-    //         enabled: true,
-    //         duration: 400, // don't foget to change the duration also in CSS
-    //         opener: function(element) {
-    //             return element.find('img');
-    //         }
-    //     }
-
-    // });
+    //бургер
+    $('.menu__btn').on('click', function() {
+        $('.menu__list').toggleClass('menu__list--active')
+    })
 });
