@@ -54,9 +54,9 @@
 
                 <div class="header__info">
                     <p class="header__description">Туры по самым экзотическим местам Поехали с нами за новыми впечатлениями!</p>
-                    <a class="header__btn" href="#">Оставить заявку</a>
+                    <a class="header__btn scrollto" href="#reserved__anchor">Оставить заявку</a>
                     <div class="header__arrow">
-                        <a class="header__arrow-link" href="">
+                        <a class="header__arrow-link scrollto" href="#premium__anchor">
                             <img class="header__arrow-img" src="img/arrow.svg" alt=""></a>
                     </div>
                 </div>
@@ -292,7 +292,7 @@
         </div>
 
     </section>
-    <section class="premium">
+    <section class="premium" id="premium__anchor">
         <div class="container">
             <h2 class="premium__header title">Сафари тур премиум класса</h2>
             <div class="premium__inner">
@@ -341,7 +341,7 @@
             <h2 class="reserved__title title">
                 Забронируйте отдых в Африке
             </h2>
-            <form class="reserved__form" action="">
+            <form class="reserved__form" action="" id="reserved__anchor">
                 <input class="reserved__input" type="text" placeholder="Ваше имя">
                 <input class="reserved__input" type="text" placeholder="Телефон">
                 <input class="reserved__input" type="text" placeholder="E-mail">
@@ -357,7 +357,7 @@
             </form>
         </div>
     </section>
-    <!-- 
+
     <footer class="footer">
         <div class="container">
             <div class="footer__logo">
@@ -380,7 +380,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- !ФАЙЛ JS И JQUERY ДОЛЖНЫ НАХОДИТСЯ ВЫШЕ ВСЕХ ОСТАЛЬНЫХ JS ФАЙЛОВ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

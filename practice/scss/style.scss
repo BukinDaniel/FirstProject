@@ -1,572 +1,602 @@
-        @import "_nullstyle";
-        @import "_header";
-        @import "_footer";
-        /*Общие правила: 
+@import "_nullstyle";
+@import "_header";
+@import "_footer";
+
+/*Общие правила: 
 1. при добавлении картинки чтобы задать ей всю высоты страницы используют min-height:100vh
 1.2. так же картинке прописывается no-repeat, когда она - фон
 1.3. центрируем картинку bg-position: top center
 1.4. и "растягиваем картинку bg-size: cover
 */
-        
-        // в body вносят общие значения (шрифт и все дела)
-        body {
-            font-family: 'Roboto';
-            font-size: 16px;
-            line-height: 18px;
-            font-weight: 400;
-            color: #1F1E1E;
-        }
-        
-        .title {
-            font-size: 36px;
-            font-weight: 500;
-            line-height: 130%;
-            text-align: center;
-        }
-        
-        .header {
-            background-image: url(/img/fon.jpg);
-            background-position: top center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        /* max-width используется для адаптива дальнейшего
+
+// в body вносят общие значения (шрифт и все дела)
+body {
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #1F1E1E;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 130%;
+    text-align: center;
+}
+
+.header {
+    background-image: url(/img/fon.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* max-width используется для адаптива дальнейшего
 маргин 0 авто - центрирование, паддинги так же для адаптива,чтобы не прижимался контент к краю
  после добавления паддингов надо увеличить max-width */
-        
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
-        
-        // tac - по центру 
-        // mb auto оттолкнуться
-        .country {
-            padding: 100px 0px;
-        }
-        
-        // grid-dap - отступы элементов друг от друга
-        .country__inner {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 32px;
-        }
-        
-        .country__text {
-            border: 1px solid #D9D9DE;
-            border-top: none;
-            padding: 12px 19px 19px;
-        }
-        
-        .direction {
-            background: url(/img/fondirection.png);
-            background-color: #886239;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top left;
-            padding: 32px 0px 51px;
-        }
-        
-        .direction__header {
-            color: #FFFFFF;
-            margin-bottom: 52px;
-        }
-        
-        .direction__items {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 53px 67px;
-        }
-        
-        .direction__img {
-            margin-bottom: 15px;
-        }
-        
-        .direction__text {
-            color: #FFFFFF;
-            line-height: 21px;
-        }
-        
-        .offers {
-            padding: 100px 0px;
-        }
-        
-        .offers__header {
-            font-weight: 700;
-            line-height: 42px;
-            margin-bottom: 40px;
-        }
-        
-        .offers__items {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            grid-gap: 32px;
-            padding-bottom: 82px;
-            border-bottom: 1px solid #D9D9DE;
-        }
-        
-        .offers__link {
-            color: #FFFFFF;
-            line-height: 21px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            padding: 16px 24px 19px;
-            min-height: 256px;
-        }
-        
-        // Обращение к большим элементам (3 и 6)
-        .offers__link:nth-child(3),
-        .offers__link:nth-child(6) {
-            grid-column: span 2; // начинается там где начинался и соединен в 2 колонки
-            grid-row: span 2; // так же, только со строками
-        }
-        
-        .offers__title {
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 23px;
-            margin-bottom: 15px;
-        }
-        
-        .offers__title--big {
-            font-size: 24px;
-        }
-        
-        .offers__price {
-            font-weight: 700;
-            margin-top: auto;
-        }
-        
-        .offers__country,
-        .offers__time {
-            margin-bottom: 15px;
-        }
-        
-        .map {
-            padding-bottom: 100px;
-        }
-        
-        .map__header {
-            margin-bottom: 46px;
-        }
-        
-        .about-safari {
-            padding-bottom: 100px;
-        }
-        
-        .about-safari__inner {
-            display: grid;
-            grid-template-columns: 448px 640px;
-            grid-gap: 32px;
-        }
-        
-        .about-safari__header {
-            text-align: left;
-            font-size: 36px;
-            font-weight: 500;
-            margin-bottom: 25px;
-        }
-        
-        .about-safari__text {
-            font-size: 18px;
-            line-height: 25px;
-            margin-bottom: 34px;
-        }
-        
-        .about-safari__read {
-            color: #C4C4C4;
-            text-decoration: underline;
-        }
-        
-        .about-safari__video {
-            background: url(/img/video.jpg);
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .gallary {
-            background-color: #886239;
-            padding: 49px 0px 106px;
-            color: #FFFFFF;
-        }
-        
-        .gallary__up {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 32px;
-            padding-right: 160px;
-        }
-        
-        .galary__item-inner {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 32px;
-        }
-        
-        .gallary__enter {
-            text-decoration: underline;
-        }
-        
-        // Кнопки(положение) регулируются путем отладки
-        .slick-btn {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            position: absolute;
-            top: -85px;
-            right: 0;
-        }
-        
-        .slick-prev {
-            right: 60px;
-        }
-        
-        .premium {
-            padding: 100px 0px;
-        }
-        
-        .premium__header {
-            margin-bottom: 77px;
-            text-transform: uppercase;
-        }
-        
-        //Чтобы удобнее работать с текстом используй column-count
-        .premium__inner {
-            column-count: 2;
-            column-gap: 46px;
-            padding-bottom: 50px;
-            margin-bottom: 44px;
-            border-bottom: 1px solid #c4c4c4;
-        }
-        
-        .premium__paragraph {
-            margin-bottom: 15px;
-            span {
-                font-weight: 700;
-            }
-        }
-        
-        .premium__footer {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-gap: 70px;
-        }
-        
-        .premium__item:nth-child(4) {
-            min-width: 277px;
-        }
-        
-        .premium__number {
-            font-size: 58px;
-            font-weight: 700;
-            line-height: 65px;
-            color: #886239;
-            text-align: center;
-        }
-        
-        .premium__text {
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 26px;
-            text-align: center;
-        }
-        
-        .reserved {
-            background-color: #eaeaea;
-            padding: 75px 0px 76px;
-        }
-        
-        .reserved__title {
-            margin-bottom: 43px;
-        }
-        
-        .reserved__form {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            max-width: 832px;
-            margin: 0 auto;
-        }
-        
-        .reserved__input {
-            width: 256px;
-            height: 44px;
-            border: 1px solid #D9D9DE;
-            padding: 11px 14px 12px;
-            margin-bottom: 28px;
-        }
-        
-        .reserved__input::placeholder,
-        .reserved__textarea::placeholder {
-            color: #C4C4C4;
-        }
-        
-        .reserved__textarea {
-            width: 100%;
-            height: 112px;
-            padding: 14px;
-            border: 1px solid #D9D9DE;
-            resize: none;
-            margin-bottom: 67px;
-        }
-        
-        .reserved__btn {
-            background-color: #886239;
-            border-radius: 30px;
-            padding: 19px 64px 20px;
-            color: #FFFFFF;
-        }
-        
-        .reserced__label {
-            text-decoration: underline;
-            // выравниваем квадрат и надпись
-            display: flex;
-            align-items: center;
-        }
-        
-        // использовать display:none не круто, скрываем так чекбокс
-        .reserved__checkbox {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-            padding-left: 45px;
-        }
-        
-        //стилизуем чекбокс, позиция задается position,чтобы не был сплюснутуым
-        // если выпихнул маррджином его влево на минус, то у родителя делай паддинг
-        .reserved__checkbox-style {
-            width: 26px;
-            height: 26px;
-            border: 2px solid #c4c4c4;
-            border-radius: 2px;
-            position: absolute;
-            margin-left: -45px;
-        }
-        
-        // активация чекбокса
-        .reserved__checkbox:checked+.reserved__checkbox-style::before {
-            content: '';
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background-color: #C4C4C4;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        .menu__btn {
-            display: none;
-        }
-        
-        // adaptive media
-        // Медиа запрос должен быть написан ниже того селектора, к которому он обращается
-        @media (max-width:1140px) {
-            .country__inner {
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 20px;
-            }
-            .counrty__img {
-                width: 100%;
-            }
-            .about-safari__inner {
-                grid-gap: 20px;
-                grid-template-columns: 1fr 2fr;
-            }
-            .galary__item-inner {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .galary__item-img {
-                width: 100%;
-            }
-            .premium__footer {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 30px 15px;
-            }
-        }
-        
-        @media (max-width:912px) {
-            .header__info {
-                color: #FFFFFF;
-            }
-        }
-        
-        @media(max-width:990px) {
-            .offers__link {
-                min-height: 200px;
-            }
-            .offers__items {
-                grid-gap: 10px;
-            }
-        }
-        
-        @media (max-width:800px) {
-            .country,
-            .offers,
-            .direction,
-            .gallary,
-            .premium {
-                padding: 45px 0;
-            }
-            .header__tel span {
-                display: none;
-            }
-            .direction__items {
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 40px;
-            }
-            .offers__link:nth-child(3),
-            .offers__link:nth-child(6) {
-                grid-column: auto;
-                grid-row: auto;
-            }
-            .offers__items {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 0;
-            }
-            .offers__link {
-                min-height: 350px;
-            }
-            .map,
-            .about-safari {
-                padding-bottom: 50px;
-            }
-            .map__iframe {
-                height: 300px;
-            }
-            .about-safari__inner {
-                grid-gap: 20px;
-                grid-template-columns: 1fr;
-            }
-            .about-safari__video {
-                min-height: 400px;
-            }
-            .premium__header {
-                margin-bottom: 46px;
-            }
-            .premium__inner {
-                column-count: 1;
-            }
-            .premium__footer {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width:560px) {
-            .header__title {
-                font-size: 50px;
-            }
-            // Бургер и скрытие навигации,+центрирование элементов
-            .menu__btn {
-                display: inline-block;
-                width: 30px;
-                height: 20px;
-                border: none;
-                padding: 0;
-                background-color: transparent;
-                position: absolute;
-                right: 10px;
-                top: 25px;
-            }
-            .menu__btn::after,
-            .menu__btn::before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                left: 0;
-                height: 2px;
-                background: #ffffff;
-            }
-            .menu__btn::before {
-                top: 0;
-            }
-            .menu__btn::after {
-                bottom: 0;
-            }
-            .menu__btn span {
-                display: block;
-                height: 2px;
-                background-color: #FFFFFF;
-            }
-            .menu__list {
-                transform: translateX(200%);
-                display: block;
-                background-color: #886239;
-                padding: 10px 0;
-                border: none;
-                transition: 500ms;
-                position: absolute;
-                left: 0;
-                right: 0;
-            }
-            .menu__list.menu__list--active {
-                transform: translateX(0%);
-                transition: 500ms;
-            }
-            .menu__link {
-                padding: 10px;
-                display: block;
-                text-align: center;
-            }
-            .logo {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-            .header__tel-link {
-                display: block;
-                margin-left: 0px;
-                margin-bottom: 15px;
-            }
-            .header__btn {
-                display: block;
-                text-align: center;
-            }
-            .country__inner {
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 10px;
-            }
-            .direction__items {
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 30px;
-            }
-            .title {
-                font-size: 28px;
-            }
-            .gallary__header {
-                width: 100%;
-                text-align: left;
-            }
-            .gallary__up {
-                flex-wrap: wrap;
-            }
-        }
-        
-        @media(max-width:460px) {
-            .country__inner,
-            .offers__items,
-            .direction__items,
-            .premium__footer {
-                grid-template-columns: repeat(1, 1fr);
-            }
-            .direction__item {
-                text-align: center;
-            }
-            .about-safari__video {
-                min-height: 200px;
-            }
-        }
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+// tac - по центру 
+// mb auto оттолкнуться
+.country {
+    padding: 100px 0px;
+}
+
+// grid-dap - отступы элементов друг от друга
+.country__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+}
+
+.country__text {
+    border: 1px solid #D9D9DE;
+    border-top: none;
+    padding: 12px 19px 19px;
+}
+
+.direction {
+    background: url(/img/fondirection.png);
+    background-color: #886239;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    padding: 32px 0px 51px;
+}
+
+.direction__header {
+    color: #FFFFFF;
+    margin-bottom: 52px;
+}
+
+.direction__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 53px 67px;
+}
+
+.direction__img {
+    margin-bottom: 15px;
+}
+
+.direction__text {
+    color: #FFFFFF;
+    line-height: 21px;
+}
+
+.offers {
+    padding: 100px 0px;
+}
+
+.offers__header {
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 40px;
+}
+
+.offers__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 32px;
+    padding-bottom: 82px;
+    border-bottom: 1px solid #D9D9DE;
+}
+
+.offers__link {
+    color: #FFFFFF;
+    line-height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 16px 24px 19px;
+    min-height: 256px;
+}
+
+// Обращение к большим элементам (3 и 6)
+.offers__link:nth-child(3),
+.offers__link:nth-child(6) {
+    grid-column: span 2; // начинается там где начинался и соединен в 2 колонки
+    grid-row: span 2; // так же, только со строками
+}
+
+.offers__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-bottom: 15px;
+}
+
+.offers__title--big {
+    font-size: 24px;
+}
+
+.offers__price {
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.offers__country,
+.offers__time {
+    margin-bottom: 15px;
+}
+
+.map {
+    padding-bottom: 100px;
+}
+
+.map__header {
+    margin-bottom: 46px;
+}
+
+.about-safari {
+    padding-bottom: 100px;
+}
+
+.about-safari__inner {
+    display: grid;
+    grid-template-columns: 448px 640px;
+    grid-gap: 32px;
+}
+
+.about-safari__header {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.about-safari__text {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 34px;
+}
+
+.about-safari__read {
+    color: #C4C4C4;
+    text-decoration: underline;
+}
+
+.about-safari__video {
+    background: url(/img/video.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallary {
+    background-color: #886239;
+    padding: 49px 0px 106px;
+    color: #FFFFFF;
+}
+
+.gallary__up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-right: 160px;
+}
+
+.galary__item-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+}
+
+.gallary__enter {
+    text-decoration: underline;
+}
+
+// Кнопки(положение) регулируются путем отладки
+.slick-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -85px;
+    right: 0;
+}
+
+.slick-prev {
+    right: 60px;
+}
+
+.premium {
+    padding: 100px 0px;
+}
+
+.premium__header {
+    margin-bottom: 77px;
+    text-transform: uppercase;
+}
+
+//Чтобы удобнее работать с текстом используй column-count
+.premium__inner {
+    column-count: 2;
+    column-gap: 46px;
+    padding-bottom: 50px;
+    margin-bottom: 44px;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.premium__paragraph {
+    margin-bottom: 15px;
+    span {
+        font-weight: 700;
+    }
+}
+
+.premium__footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 70px;
+}
+
+.premium__item:nth-child(4) {
+    min-width: 277px;
+}
+
+.premium__number {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 65px;
+    color: #886239;
+    text-align: center;
+}
+
+.premium__text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+}
+
+.reserved {
+    background-color: #eaeaea;
+    padding: 75px 0px 76px;
+}
+
+.reserved__title {
+    margin-bottom: 43px;
+}
+
+.reserved__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 832px;
+    margin: 0 auto;
+}
+
+.reserved__input {
+    width: 256px;
+    height: 44px;
+    border: 1px solid #D9D9DE;
+    padding: 11px 14px 12px;
+    margin-bottom: 28px;
+}
+
+.reserved__input::placeholder,
+.reserved__textarea::placeholder {
+    color: #C4C4C4;
+}
+
+.reserved__textarea {
+    width: 100%;
+    height: 112px;
+    padding: 14px;
+    border: 1px solid #D9D9DE;
+    resize: none;
+    margin-bottom: 67px;
+}
+
+.reserved__btn {
+    background-color: #886239;
+    border-radius: 30px;
+    padding: 19px 64px 20px;
+    color: #FFFFFF;
+}
+
+.reserced__label {
+    text-decoration: underline;
+    // выравниваем квадрат и надпись
+    display: flex;
+    align-items: center;
+}
+
+// использовать display:none не круто, скрываем так чекбокс
+.reserved__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 45px;
+}
+
+//стилизуем чекбокс, позиция задается position,чтобы не был сплюснутуым
+// если выпихнул маррджином его влево на минус, то у родителя делай паддинг
+.reserved__checkbox-style {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #c4c4c4;
+    border-radius: 2px;
+    position: absolute;
+    margin-left: -45px;
+}
+
+// активация чекбокса
+.reserved__checkbox:checked+.reserved__checkbox-style::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #C4C4C4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu__btn {
+    display: none;
+}
+
+// adaptive media
+// Медиа запрос должен быть написан ниже того селектора, к которому он обращается
+@media (max-width:1140px) {
+    .country__inner {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+    .counrty__img {
+        width: 100%;
+    }
+    .about-safari__inner {
+        grid-gap: 20px;
+        grid-template-columns: 1fr 2fr;
+    }
+    .galary__item-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .galary__item-img {
+        width: 100%;
+    }
+    .premium__footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px 15px;
+    }
+}
+
+@media (max-width:912px) {
+    .header__info {
+        color: #FFFFFF;
+    }
+}
+
+@media(max-width:990px) {
+    .offers__link {
+        min-height: 200px;
+    }
+    .offers__items {
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width:800px) {
+    .country,
+    .offers,
+    .direction,
+    .gallary,
+    .premium,
+    .reserved,
+    .footer {
+        padding: 45px 0;
+    }
+    .header__tel span {
+        display: none;
+    }
+    .direction__items {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px;
+    }
+    .offers__link:nth-child(3),
+    .offers__link:nth-child(6) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .offers__items {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+    .offers__link {
+        min-height: 350px;
+    }
+    .map,
+    .about-safari {
+        padding-bottom: 50px;
+    }
+    .map__iframe {
+        height: 300px;
+    }
+    .about-safari__inner {
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+    }
+    .about-safari__video {
+        min-height: 400px;
+    }
+    .premium__header {
+        margin-bottom: 46px;
+    }
+    .premium__inner {
+        column-count: 1;
+    }
+    .premium__footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reserved__form {
+        flex-direction: column;
+    }
+    .reserved__textarea {
+        width: 256px;
+    }
+    .reserved__btn {
+        margin-bottom: 10px;
+    }
+    .footer__us {
+        display: block;
+        text-align: center;
+    }
+    .footer__logo {
+        margin-bottom: 30px;
+    }
+    .footer__info,
+    .footer__address,
+    .footer__contact {
+        margin: 0 auto 25px;
+    }
+}
+
+@media (max-width:560px) {
+    .header__title {
+        font-size: 50px;
+    }
+    // Бургер и скрытие навигации,+центрирование элементов
+    .menu__btn {
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+    .menu__btn::after,
+    .menu__btn::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 2px;
+        background: #ffffff;
+    }
+    .menu__btn::before {
+        top: 0;
+    }
+    .menu__btn::after {
+        bottom: 0;
+    }
+    .menu__btn span {
+        display: block;
+        height: 2px;
+        background-color: #FFFFFF;
+    }
+    .menu__list {
+        transform: translateX(200%);
+        display: block;
+        background-color: #886239;
+        padding: 10px 0;
+        border: none;
+        transition: 500ms;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .menu__list.menu__list--active {
+        transform: translateX(0%);
+        transition: 500ms;
+    }
+    .menu__link {
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+    .logo {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .header__tel-link {
+        display: block;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+    .header__btn {
+        display: block;
+        text-align: center;
+    }
+    .country__inner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    .direction__items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .gallary__header {
+        width: 100%;
+        text-align: left;
+    }
+    .gallary__up {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:460px) {
+    .country__inner,
+    .offers__items,
+    .direction__items,
+    .premium__footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .direction__item {
+        text-align: center;
+    }
+    .about-safari__video {
+        min-height: 200px;
+    }
+    .reserced__label {
+        width: 50%;
+        text-align: center;
+    }
+}

@@ -727,7 +727,9 @@ body {
   .offers,
   .direction,
   .gallary,
-  .premium {
+  .premium,
+  .reserved,
+  .footer {
     padding: 45px 0;
   }
   .header__tel span {
@@ -776,6 +778,30 @@ body {
   .premium__footer {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  .reserved__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reserved__textarea {
+    width: 256px;
+  }
+  .reserved__btn {
+    margin-bottom: 10px;
+  }
+  .footer__us {
+    display: block;
+    text-align: center;
+  }
+  .footer__logo {
+    margin-bottom: 30px;
+  }
+  .footer__info,
+  .footer__address,
+  .footer__contact {
+    margin: 0 auto 25px;
   }
 }
 
@@ -887,5 +913,9 @@ body {
   }
   .about-safari__video {
     min-height: 200px;
+  }
+  .reserced__label {
+    width: 50%;
+    text-align: center;
   }
 }

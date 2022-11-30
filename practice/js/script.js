@@ -29,4 +29,13 @@ $(function() {
     $('.menu__btn').on('click', function() {
         $('.menu__list').toggleClass('menu__list--active')
     })
+
+    $(function() {
+        $("a.scrollto").click(function() {
+            let elementClick = $(this).attr("href")
+            let destination = $(elementClick).offset().top;
+            $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 2500);
+            return false;
+        });
+    });
 });
