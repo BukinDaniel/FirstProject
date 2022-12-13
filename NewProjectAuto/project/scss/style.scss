@@ -1,0 +1,194 @@
+@import "_nullstyle";
+// для использования в селекторе пишется @incude и имя миксина
+$white: #FFFFFF;
+$firm: #21062A;
+$purple: #5A0D67;
+$grey: #C4C4C4;
+$black: #2C2B2B;
+$UC: uppercase;
+@mixin Headerh2 {
+    font-size: 24px;
+}
+
+@mixin Headerh1 {
+    font-weight: 400;
+    font-size: 36px;
+}
+
+@mixin Headerh0 {
+    font-weight: 400;
+    font-size: 72px;
+}
+
+a {
+    color: $white;
+    display: inline-block;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(../../img/fon.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    min-height: 700px;
+    color: $white;
+    //  margin-bottom: 100px;
+}
+
+.button {
+    padding: 14px 55px;
+    text-transform: $UC;
+    background-color: $purple;
+    font-size: 14px;
+}
+
+.button:hover {
+    background-color: $white;
+    color: $purple;
+    transition: .5s;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 105px;
+}
+
+.logo {}
+
+.header__logo-link {}
+
+.header__phone {
+    @include Headerh1();
+}
+
+.header__tel {}
+
+.header__info {}
+
+.header__tltleh0 {
+    @include Headerh0();
+    text-transform: $UC;
+    line-height: 106px;
+}
+
+.header__titleh1 {
+    @include Headerh1();
+    text-transform: $UC;
+    margin-bottom: 30px;
+}
+
+.header__text {}
+
+.header__down {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    width: 100%;
+}
+
+.header__consult {
+    margin: 0 -55px;
+}
+
+.header__consult-text {
+    margin: 30px 0px 70px 55px;
+}
+
+.header__social {
+    justify-content: center;
+    display: flex;
+}
+
+.header__social-link {
+    margin-right: 10px;
+}
+
+.header__social-img {}
+
+.header__content {
+    position: relative;
+    padding-top: 47px;
+}
+
+.header__ford {
+    position: absolute;
+    right: 0;
+    bottom: -330px;
+}
+
+.services {
+    padding-top: 300px;
+}
+
+.services__title {
+    @include Headerh1();
+    margin-bottom: 50px;
+}
+
+.services__inner {
+    display: flex;
+}
+
+.services__desription {
+    margin-right: 95px;
+}
+
+.services__descr--inner {
+    margin-bottom: 38px;
+}
+
+.services__subtitle {
+    color: $purple;
+    margin-bottom: 12px;
+}
+
+.services__subtitle-69 {
+    color: $purple;
+    margin-bottom: 12px;
+    padding-top: 30px;
+}
+
+.services__text {
+    margin-bottom: 12px;
+    max-width: 504px;
+    width: 100%;
+}
+
+.services__service {}
+
+.services__item {
+    display: flex;
+    align-items: center;
+    border: 1px solid $grey;
+    min-width: 450px;
+    width: 100%;
+    min-height: 75px;
+    margin-bottom: 12px;
+}
+
+.services__number {
+    transform: rotate(-90deg);
+    color: $grey;
+    padding: 0 40px 0 40px;
+    font-size: 36px;
+}
+
+.services__item:hover {
+    transition: .5s;
+    transform: scale(1.1);
+}
