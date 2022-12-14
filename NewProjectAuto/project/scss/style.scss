@@ -441,3 +441,64 @@ body {
 .footer__text {
     color: $white;
 }
+
+@media (max-width:910px) {
+    .header__ford {
+        transform: scale(0.7);
+    }
+    .header {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width:800px) {
+    .header__tltleh0 {
+        font-size: 55px;
+    }
+    .header__titleh1 {
+        font-size: 24px;
+    }
+    .header__ford {
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width:650px) {
+    .header__tltleh0 {
+        font-size: 40px;
+    }
+    .header__titleh1 {
+        font-size: 15px;
+    }
+    .header__ford {
+        transform: scale(0.4);
+    }
+}
+
+@media (max-width:560px) {
+    .header__top {
+        flex-direction: column;
+    }
+    .header__logo-link {
+        margin-bottom: 30px;
+    }
+    .header__inner {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .header__consult-text {
+        margin: 30px 0;
+    }
+    .header__ford {
+        right: -115px;
+        bottom: -335px;
+    }
+}
+
+@media (max-width:445px) {
+    .header__ford {
+        display: none;
+    }
+}
