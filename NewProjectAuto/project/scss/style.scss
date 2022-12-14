@@ -423,3 +423,21 @@ body {
     text-align: center;
     color: $grey;
 }
+
+.footer {
+    background-color: $firm;
+    height: 100px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.footer__logo-link {}
+
+.footer__text {
+    color: $white;
+}
