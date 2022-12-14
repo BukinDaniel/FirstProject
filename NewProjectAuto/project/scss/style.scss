@@ -38,6 +38,24 @@ body {
     margin: 0 auto;
 }
 
+.title {
+    @include Headerh1();
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: $firm;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    background-color: $black;
+    top: 10px;
+    margin-left: 20px;
+}
+
 .header {
     background-image: url(../../img/fon.jpg);
     background-repeat: no-repeat;
@@ -45,7 +63,7 @@ body {
     background-size: cover;
     min-height: 700px;
     color: $white;
-    //  margin-bottom: 100px;
+    margin-bottom: 300px;
 }
 
 .button {
@@ -131,64 +149,98 @@ body {
     bottom: -330px;
 }
 
-.services {
-    padding-top: 300px;
-}
-
-.services__title {
-    @include Headerh1();
-    margin-bottom: 50px;
-}
+.services__title {}
 
 .services__inner {
     display: flex;
 }
 
-.services__desription {
+.services__descr {
+    width: 505px;
     margin-right: 95px;
 }
 
-.services__descr--inner {
-    margin-bottom: 38px;
+.services__descr-box {
+    margin-bottom: 57px;
 }
 
-.services__subtitle {
+.services__descr-title {
     color: $purple;
     margin-bottom: 12px;
+    font-weight: 300;
 }
 
-.services__subtitle-69 {
-    color: $purple;
+.services__descr-text {
     margin-bottom: 12px;
-    padding-top: 30px;
 }
 
-.services__text {
-    margin-bottom: 12px;
-    max-width: 504px;
-    width: 100%;
+.services__list {
+    list-style: none;
+    counter-reset: myCounter;
 }
-
-.services__service {}
 
 .services__item {
-    display: flex;
-    align-items: center;
-    border: 1px solid $grey;
-    min-width: 450px;
-    width: 100%;
-    min-height: 75px;
+    counter-increment: myCounter;
+    width: 450px;
+    padding: 10px 10px 10px 115px;
+    border: 2px solid $grey;
     margin-bottom: 12px;
+    position: relative;
 }
 
-.services__number {
-    transform: rotate(-90deg);
+.services__item::before {
+    content: '0' counter(myCounter);
     color: $grey;
-    padding: 0 40px 0 40px;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    transform: rotate(270deg);
     font-size: 36px;
+    font-weight: 400;
+    line-height: 53px;
+    transition: all .5s;
 }
 
 .services__item:hover {
-    transition: .5s;
-    transform: scale(1.1);
+    border: 2px solid $purple;
+    transition: all .5s;
+    width: 500px;
+}
+
+.services__item:hover .services__item-title {
+    color: $purple;
+}
+
+.services__item:hover::before {
+    color: $purple;
+}
+
+.services__item-title {
+    @include Headerh2();
+}
+
+.services__consult-text {
+    position: relative;
+}
+
+.services__consult-text:hover::after {
+    content: 'ЖМИ УЖЕ,НАВЕЛСЯ ЖЕ';
+    width: 150px;
+}
+
+.services__consult-text::after {
+    content: 'ЖМИ';
+    color: $grey;
+    position: absolute;
+    margin-left: 130px;
+}
+
+.services__consult-text::before {
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: $grey;
+    position: absolute;
+    right: -70px;
+    top: 27px;
 }
