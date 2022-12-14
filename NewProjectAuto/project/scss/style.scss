@@ -149,6 +149,10 @@ body {
     bottom: -330px;
 }
 
+.services {
+    margin-bottom: 100px;
+}
+
 .services__title {}
 
 .services__inner {
@@ -243,4 +247,179 @@ body {
     position: absolute;
     right: -70px;
     top: 27px;
+}
+
+.why {
+    margin-bottom: 100px;
+}
+
+.why__inner {
+    display: flex;
+}
+
+.why__left-img {
+    margin-right: 95px;
+}
+
+.why__title {
+    padding-left: 185px;
+}
+
+.why__descr {
+    background-color: $firm;
+    color: $white;
+    padding: 23px 285px 45px 185px;
+}
+
+.why__item {
+    width: 316px;
+    margin-bottom: 20px;
+}
+
+.why__item:last-child {
+    margin-bottom: 0;
+}
+
+.why__number {
+    @include Headerh1();
+    line-height: 53px;
+}
+
+.why__header {
+    @include Headerh2();
+    line-height: 36px;
+}
+
+.why__text {
+    color: $grey;
+}
+
+.auto__slider {
+    margin: 0 -7px;
+}
+
+.auto {
+    padding-bottom: 100px;
+}
+
+.auto__item {
+    border: 1px solid $grey;
+    padding: 6px 6px 16px 6px;
+    text-align: center;
+    margin: 0 7px;
+}
+
+.auto__item:hover {
+    background-color: $purple;
+    color: $white;
+    transition: .5s;
+}
+
+.auto__img {
+    max-width: 100%;
+    margin-bottom: 23px;
+}
+
+.auto__slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.auto__slider .slick-dots button {
+    font-size: 0;
+    border: none;
+    padding: 0;
+    margin: 0 10px;
+    background-color: $grey;
+    width: 50px;
+    height: 1px;
+}
+
+.auto__slider .slick-active button {
+    background-color: $purple;
+    height: 5px;
+}
+
+.contact__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__contact {}
+
+.contact__about {
+    margin-bottom: 20px;
+}
+
+.contact__about-header {
+    color: $purple;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px 75px;
+    background-color: $firm;
+    padding-bottom: 50px;
+}
+
+.contact__title {
+    padding-top: 50px;
+}
+
+.contact__title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    background-color: $black;
+    top: 10px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.contact__form-title {
+    color: $white;
+    padding-top: 50px;
+    margin-right: 83px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.contact__form-title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    background-color: $white;
+    top: 10px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.contact__btn {
+    color: $white;
+    margin-top: 66px;
+}
+
+.contact__input {
+    padding: 24px 158px;
+    border: 1px solid $white;
+    margin-bottom: 12px;
+    background-color: $firm;
+    width: 450px;
+    height: 75px;
+    color: $grey;
+}
+
+.contact__input::placeholder {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: center;
+    color: $grey;
 }
