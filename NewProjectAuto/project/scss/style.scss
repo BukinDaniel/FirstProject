@@ -442,12 +442,55 @@ body {
     color: $white;
 }
 
+@media (max-width:1200px) {
+    .why__descr {
+        padding-top: 23px;
+        padding-right: 100%;
+        padding-bottom: 45px;
+        padding-left: 185px;
+    }
+}
+
+@media (max-width:1000px) {
+    .services__list {
+        margin-top: 50px;
+    }
+}
+
 @media (max-width:910px) {
     .header__ford {
         transform: scale(0.7);
     }
+    .services__list {
+        margin-top: 0;
+    }
     .header {
         margin-bottom: 100px;
+    }
+    .services__title {
+        margin-bottom: 15px;
+    }
+    .services__descr-box {
+        margin-bottom: 0;
+    }
+    .services__item:hover {
+        width: 450px;
+    }
+    .services__descr-text {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .services__descr {
+        margin-right: 35px;
+    }
+    .services__descr-title {
+        margin-bottom: 5px;
+    }
+    .why__descr {
+        padding-top: 23px;
+        padding-right: 0;
+        padding-bottom: 45px;
+        padding-left: 0;
     }
 }
 
@@ -460,6 +503,27 @@ body {
     }
     .header__ford {
         transform: scale(0.5);
+    }
+    .services__inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .services__descr {
+        width: 100%;
+    }
+    .services__descr {
+        margin-right: 0;
+    }
+    .services__consult-text {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .services__item {
+        padding: 10px 10px 10px 15px;
+    }
+    .services__item::before {
+        left: 20px;
     }
 }
 
@@ -495,10 +559,52 @@ body {
         right: -115px;
         bottom: -335px;
     }
+    .header__text {
+        font-size: 16px;
+    }
+    .header__top {
+        margin-bottom: 50px;
+    }
 }
 
-@media (max-width:445px) {
+@media (max-width:480px) {
+    .services__item {
+        width: 400px;
+    }
+    .services__item::before {
+        display: none;
+    }
+    .services__item {
+        width: 100%;
+    }
+}
+
+@media (max-width:455px) {
     .header__ford {
         display: none;
+    }
+    .services__consult-text::after {
+        display: none;
+    }
+    .services__consult-text::before {
+        display: none;
+    }
+    .title {
+        text-align: center;
+    }
+    .header {
+        margin-bottom: 20px;
+    }
+    .title::after {
+        display: none;
+    }
+    .header {
+        min-height: 450px;
+    }
+}
+
+@media (max-width:440px) {
+    .header__tltleh0 {
+        line-height: 50px;
     }
 }
