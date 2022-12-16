@@ -405,6 +405,10 @@ body {
     margin-top: 66px;
 }
 
+.contact__contact-box {
+    width: 600px;
+}
+
 .contact__input {
     padding: 24px 158px;
     border: 1px solid $white;
@@ -426,7 +430,7 @@ body {
 
 .footer {
     background-color: $firm;
-    height: 100px;
+    min-height: 100px;
 }
 
 .footer__inner {
@@ -443,17 +447,32 @@ body {
 }
 
 @media (max-width:1200px) {
+    .why__rigth--info {
+        width: 100%;
+    }
     .why__descr {
-        padding-top: 23px;
-        padding-right: 100%;
-        padding-bottom: 45px;
-        padding-left: 185px;
+        padding: 0;
+    }
+    .why__title {
+        padding: 0;
     }
 }
 
 @media (max-width:1000px) {
     .services__list {
         margin-top: 50px;
+    }
+    .contact__inner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .contact__contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .contact__title {
+        width: 100%;
     }
 }
 
@@ -525,6 +544,17 @@ body {
     .services__item::before {
         left: 20px;
     }
+    .why__left-img {
+        display: none;
+    }
+    .why__item {
+        text-align: center;
+        width: 100%;
+    }
+    .contact__form {
+        padding: 0;
+        padding-bottom: 20px;
+    }
 }
 
 @media (max-width:650px) {
@@ -536,6 +566,15 @@ body {
     }
     .header__ford {
         transform: scale(0.4);
+    }
+    .contact__form {
+        width: 100%;
+    }
+    .contact__contact-box {
+        width: 100%;
+    }
+    .contact__input {
+        width: 100%;
     }
 }
 
@@ -565,6 +604,33 @@ body {
     .header__top {
         margin-bottom: 50px;
     }
+    .contact__about {
+        text-align: center;
+        margin-right: 10px;
+    }
+    .contact__contact {
+        justify-content: space-evenly;
+    }
+    .contact__form-title {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .contact__form-title::after {
+        display: none;
+    }
+    .contact__input::placeholder {
+        content: '';
+    }
+    .footer__inner {
+        flex-direction: column;
+    }
+    .footer__logo-link {
+        margin-bottom: 10px;
+    }
+    .footer__social {
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width:480px) {
@@ -577,26 +643,37 @@ body {
     .services__item {
         width: 100%;
     }
-}
-
-@media (max-width:455px) {
     .header__ford {
         display: none;
     }
+    .title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .title::after {
+        display: none;
+    }
+    .services,
+    .why {
+        margin-bottom: 20px;
+    }
+    .auto__slider .slick-dots button {
+        width: 30px;
+    }
+    .contact__input {
+        padding: 25px 50px;
+    }
+}
+
+@media (max-width:455px) {
     .services__consult-text::after {
         display: none;
     }
     .services__consult-text::before {
         display: none;
     }
-    .title {
-        text-align: center;
-    }
     .header {
         margin-bottom: 20px;
-    }
-    .title::after {
-        display: none;
     }
     .header {
         min-height: 450px;
